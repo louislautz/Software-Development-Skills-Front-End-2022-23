@@ -1,16 +1,14 @@
 {
   "name": "kitis_kitties",
   "version": "1.0.0",
-  "description": "Example page about an imaginary cat cafe page",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recursive",
-    "deploy": "gh-pages -d dist"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
-  "author": "Louis Lautz",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^8.0.0"
-  },
-  "devDependencies": {}
+  }
 }

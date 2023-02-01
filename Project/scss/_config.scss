@@ -1,0 +1,17 @@
+// Colors
+$primary-background:#1C0A00;
+// $secondary-background:#361500;
+$secondary-background:#240e00;
+$primary-accent:#CC9544;
+$secondary-accent:#603601;
+
+// Variables
+$navbar-height: 80px;
+
+// Class prototypes
+.nav-components {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+}
