@@ -1,4 +1,10 @@
 @import "config";
+@import "utility";
+
+@import "header";
+
+@import "index";
+@import "gallery";
 
 * {
     box-sizing: border-box;
@@ -9,102 +15,3 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: $navbar-height;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: $primary-background;
-    
-    #logo-banner {
-        @extend .nav-components;
-        
-        #logo-img {
-            height: 100%;
-            aspect-ratio: 1 / 1;
-            background-color: $primary-accent;
-            padding: 5px;
-        }
-        
-        #logo-title {
-            font-size: 45px;
-            font-family: Snell Roundhand, cursive;
-            color: $primary-accent;
-            letter-spacing: 2px;
-            margin-left: 10px;
-        }
-    }
-    
-    nav {
-        height: 100%;
-        
-        ul {
-            @extend .nav-components;
-            justify-content: space-between;
-            gap: 50px;
-            list-style: none;
-            margin: 0 20px 0 0;
-            padding: 0;
-            
-            a {
-                font-size: 20px;
-                text-decoration: none;
-                color: $primary-accent;
-            }
-        }
-    }
-}
-
-main {
-    margin-top: $navbar-height;
-
-    #landing-page {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        height: calc(100vh - #{$navbar-height});
-        background-color: $secondary-background;
-
-        #heading {
-            margin: 10vh 0 0 10vw;
-            
-            h1 {
-                font-size: 100px;
-                margin: 0;
-                color: $primary-accent;
-            }
-            
-            p {
-                font-size: 20px;
-                color: $primary-accent;
-            }
-        }
-        
-        .buttons {
-            display: flex;
-            flex-direction: row;
-            margin: 0 0 0 10vw;
-            gap: 30px;  
-
-            .button {
-                padding: 15px 30px;
-                background-color: $primary-accent;
-                border-radius: 500px;
-                
-                a {
-                    text-decoration: none;
-                    color: $primary-background;
-                }
-            }
-        }
-
-    }
-}
-
-@import "utility";

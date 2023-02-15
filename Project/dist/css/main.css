@@ -4,13 +4,17 @@
   height: 100%;
   align-items: center; }
 
-* {
-  box-sizing: border-box; }
+span.initial {
+  font-size: 25px; }
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+span.accent-color {
+  color: #CC9544; }
+
+.nav-components, header #logo-banner, header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
 
 header {
   position: fixed;
@@ -22,7 +26,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #1C0A00; }
+  background-color: #120600;
+  border-bottom: 1px solid #CC9544; }
   header #logo-banner #logo-img {
     height: 100%;
     aspect-ratio: 1 / 1;
@@ -42,43 +47,99 @@ header {
       list-style: none;
       margin: 0 20px 0 0;
       padding: 0; }
+      header nav ul li:hover {
+        border-bottom: 2px solid #CC9544; }
       header nav ul a {
         font-size: 20px;
         text-decoration: none;
         color: #CC9544; }
 
+.nav-components, header #logo-banner, header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
 main {
   margin-top: 80px; }
   main #landing-page {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
     height: calc(100vh - 80px);
-    background-color: #240e00; }
+    background-color: #120600;
+    overflow: auto; }
     main #landing-page #heading {
-      margin: 10vh 0 0 10vw; }
-      main #landing-page #heading h1 {
+      display: flex;
+      flex-direction: column;
+      background-color: #361500;
+      width: 800px;
+      margin: 10vh 0 0 10vw;
+      padding: 15px;
+      border-radius: 50px; }
+      main #landing-page #heading #heading-text h1 {
         font-size: 100px;
         margin: 0;
         color: #CC9544; }
-      main #landing-page #heading p {
+      main #landing-page #heading #heading-text p {
         font-size: 20px;
         color: #CC9544; }
-    main #landing-page .buttons {
+      main #landing-page #heading .buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 4vw;
+        gap: 30px; }
+        main #landing-page #heading .buttons .button {
+          padding: 15px 30px;
+          background-color: #CC9544;
+          border-radius: 500px; }
+          main #landing-page #heading .buttons .button a {
+            text-decoration: none;
+            color: #120600; }
+
+.nav-components, header #logo-banner, header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
+main {
+  margin-top: 80px; }
+  main #landing-page {
+    gap: 20px;
+    height: calc(100vh - 80px);
+    background-color: #120600;
+    overflow: auto; }
+    main #landing-page #heading {
       display: flex;
-      flex-direction: row;
-      margin: 0 0 0 10vw;
-      gap: 30px; }
-      main #landing-page .buttons .button {
-        padding: 15px 30px;
-        background-color: #CC9544;
-        border-radius: 500px; }
-        main #landing-page .buttons .button a {
-          text-decoration: none;
-          color: #1C0A00; }
+      flex-direction: column;
+      background-color: #361500;
+      width: 800px;
+      margin: 10vh 0 0 10vw;
+      padding: 15px;
+      border-radius: 50px; }
+      main #landing-page #heading #heading-text h1 {
+        font-size: 100px;
+        margin: 0;
+        color: #CC9544; }
+      main #landing-page #heading #heading-text p {
+        font-size: 20px;
+        color: #CC9544; }
+      main #landing-page #heading .buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 4vw;
+        gap: 30px; }
+        main #landing-page #heading .buttons .button {
+          padding: 15px 30px;
+          background-color: #CC9544;
+          border-radius: 500px; }
+          main #landing-page #heading .buttons .button a {
+            text-decoration: none;
+            color: #120600; }
 
-span.initial {
-  font-size: 25px; }
+* {
+  box-sizing: border-box; }
 
-span.accent-color {
-  color: #CC9544; }
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; }

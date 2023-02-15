@@ -1,0 +1,54 @@
+@import "config";
+
+main {
+    margin-top: $navbar-height;
+
+    #landing-page {
+        gap: 20px;
+        height: calc(100vh - #{$navbar-height});
+        background-color: $primary-background;
+        overflow: auto;
+        
+        #heading {
+            display: flex;
+            flex-direction: column;
+            background-color: $secondary-background;
+            width: 800px;
+            margin: 10vh 0 0 10vw;
+            padding: 15px;
+            border-radius: 50px;
+            
+            #heading-text {
+                
+                h1 {
+                    font-size: 100px;
+                    margin: 0;
+                    color: $primary-accent;
+                }
+                
+                p {
+                    font-size: 20px;
+                    color: $primary-accent;
+                }
+            }
+            
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                margin: 0 0 0 4vw;
+                gap: 30px;  
+    
+                .button {
+                    padding: 15px 30px;
+                    background-color: $primary-accent;
+                    border-radius: 500px;
+                    
+                    a {
+                        text-decoration: none;
+                        color: $primary-background;
+                    }
+                }
+            }
+        }
+    }
+}
