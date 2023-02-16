@@ -1,0 +1,40 @@
+.nav-components {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
+#home-main {
+  margin-top: 80px; }
+  #home-main #landing-page {
+    gap: 20px;
+    height: calc(100vh - 80px);
+    background-color: #120600;
+    overflow: auto; }
+    #home-main #landing-page #heading {
+      display: flex;
+      flex-direction: column;
+      background-color: #361500;
+      width: 800px;
+      margin: 10vh 0 0 10vw;
+      padding: 15px;
+      border-radius: 50px; }
+      #home-main #landing-page #heading #heading-text h1 {
+        font-size: 100px;
+        margin: 0;
+        color: #CC9544; }
+      #home-main #landing-page #heading #heading-text p {
+        font-size: 20px;
+        color: #CC9544; }
+      #home-main #landing-page #heading .buttons {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 0 4vw;
+        gap: 30px; }
+        #home-main #landing-page #heading .buttons .button {
+          padding: 15px 30px;
+          background-color: #CC9544;
+          border-radius: 500px; }
+          #home-main #landing-page #heading .buttons .button a {
+            text-decoration: none;
+            color: #120600; }

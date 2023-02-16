@@ -4,6 +4,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 15;
     height: $navbar-height;
     width: 100%;
     display: flex;
@@ -12,6 +13,7 @@ header {
     align-items: flex-start;
     background-color: $primary-background;
     border-bottom: 1px solid $primary-accent;
+
     
     #logo-banner {
         @extend .nav-components;
@@ -23,12 +25,16 @@ header {
             padding: 5px;
         }
         
-        #logo-title {
-            font-size: 45px;
-            font-family: Snell Roundhand, cursive;
-            color: $primary-accent;
-            letter-spacing: 2px;
-            margin-left: 10px;
+        #logo-link {
+            text-decoration: none;
+            
+            #logo-title {
+                font-size: 45px;
+                font-family: Snell Roundhand, cursive;
+                color: $primary-accent;
+                letter-spacing: 2px;
+                margin: 0 25px;
+            }
         }
     }
     

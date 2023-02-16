@@ -10,40 +10,165 @@
 <body>
     <header class="header">
         <div id="logo-banner">
-            <img src="img/logo.svg" alt="" id="logo-img">
-            <p id="logo-title">Kiti's Kitties</p>
+            <img src="img/logo.svg" alt="cat logo" id="logo-img">
+            <a href="index.html" id="logo-link">
+                <p id="logo-title">Kiti's Kitties</p>
+            </a>
         </div>
         <nav id="nav-container">
             <ul id="nav-list">
-                <li class="nav-item"><a href="#"><span class="initial">B</span>ook a visit</a></li>
-                <li class="nav-item"><a href="#"><span class="initial">G</span>allery</a></li>
-                <li class="nav-item"><a href="#"><span class="initial">M</span>enu</a></li>
-                <li class="nav-item"><a href="#"><span class="initial">C</span>ontact</a></li>
+                <li class="nav-item"><a href="booking.html"><span class="initial">B</span>ook a visit</a></li>
+                <li class="nav-item"><a href="gallery.html"><span class="initial">G</span>allery</a></li>
+                <li class="nav-item"><a href="menu.html"><span class="initial">M</span>enu</a></li>
+                <li class="nav-item"><a href="contact.html"><span class="initial">C</span>ontact</a></li>
             </ul>
         </nav>
     </header>
-    <main id="home-main">
-        <section id="landing-page">
-            <div id="heading">
-                <div id="heading-text">
-                    <h1>Kiti's Kitties</h1>
-                    <p>Turku's 1st Cat Café</p>
-                </div>
-                <div class="buttons">
-                    <div class="button">
-                        <a href="">Read More</a>
+    <main id="gallery-main">
+        <section id="gallery">
+            <h1>Gallery</h1>
+            <p>Get to know our staff!</p>
+            <div class="slideshow-grid">
+                <!-- Floricica -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/5</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Floricica/Floricica1.jpg" class="slide">
+                        <img src="img/cats/Floricica/Floricica2.jpg" class="slide">
+                        <img src="img/cats/Floricica/Floricica3.jpg" class="slide">
+                        <img src="img/cats/Floricica/Floricica4.jpg" class="slide">
+                        <img src="img/cats/Floricica/Floricica5.jpg" class="slide">
                     </div>
-                    <div class="button">
-                        <a href="">Book Visit</a>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Floricica</h3>
+                        <p class="cat-description">She is grumpy but caring and lovable. She really likes salmon.</p>
+                    </div>
+                </div>
+                <!-- Katara -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Katara/Katara.jpeg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Katara</h3>
+                        <p class="cat-description">Katara is 3 years old. She is very playful and hyperactive.</p>
+                    </div>
+                </div>
+                <!-- Bumi -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Bumi/Bumi.jpeg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Bumi</h3>
+                        <p class="cat-description">Bumi is 3 years old. He is very relaxed and patient. Lettuce Leaf?</p>
+                    </div>
+                </div>
+                <!-- Charles -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Charles/Charles.jpeg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Charles</h3>
+                        <p class="cat-description">Charles is 2 years old and very cuddly. His best friend is Mimi.</p>
+                    </div>
+                </div>
+                <!-- Mimi -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Mimi/Mimi.jpg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Mimi</h3>
+                        <p class="cat-description">Mimi is a very active and playful Kitten. Both Mimi and Charles are social and befriend anyone who gives them treats :D</p>
+                    </div>
+                </div>
+                <!-- Kiko -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Kiko/Kiko1.jpg" class="slide">
+                        <img src="img/cats/Kiko/Kiko2.jpg" class="slide">
+                        <img src="img/cats/Kiko/Kiko3.jpg" class="slide">
+                        <img src="img/cats/Kiko/Kiko4.jpg" class="slide">
+                        <img src="img/cats/Kiko/Kiko5.jpg" class="slide">
+                        <img src="img/cats/Kiko/Kiko6.jpg" class="slide">
+                        <img src="img/cats/Kiko/Kiko7.jpg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Kiko</h3>
+                        <p class="cat-description">Kiko likes to sleep and wreak havoc when not sleeping.</p>
+                    </div>
+                </div>
+                <!-- Lily -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Lily/Lily1.jpg" class="slide">
+                        <img src="img/cats/Lily/Lily2.jpg" class="slide">
+                        <img src="img/cats/Lily/Lily3.jpg" class="slide">
+                        <img src="img/cats/Lily/Lily4.jpg" class="slide">
+                        <img src="img/cats/Lily/Lily5.jpg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Lily</h3>
+                        <p class="cat-description">Lilly is a bit shy, but one she gets to know someone she becomes extremely cuddly and sometimes also climbs on your shoulder. You can always win her over with food, especially chicken nuggets. Lilly likes to open doors herself and is an expert in opening any sort of food container.</p>
+                    </div>
+                </div>
+                <!-- Mika -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Mika/Mika1.jpg" class="slide">
+                        <img src="img/cats/Mika/Mika2.jpg" class="slide">
+                        <img src="img/cats/Mika/Mika3.jpg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Mika</h3>
+                        <p class="cat-description">Mika is a bit sickly but has a big heart and lots of energy.</p>
+                    </div>
+                </div>
+                <!-- Minou -->
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <p class="image-counter">1/1</p>
+                        <button class="prev" onclick="prevImage(this)">&#10094;</button>
+                        <button class="next" onclick="nextImage(this)">&#10095;</button>
+                        <img src="img/cats/Minou/Minou.jpg" class="slide">
+                    </div>
+                    <div class="slideshow-caption">
+                        <h3 class="cat-name">Minou</h3>
+                        <p class="cat-description">Mika is a bit sickly but has a big heart and lots of energy.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="news"></section>
-        <section id="history"></section>
     </main>
     <footer id="footer">
         <p>This is a fake restaurant page for an online course.</p>
     </footer>
+
+    <script src="js/gallery.js"></script>
 </body>
 </html>

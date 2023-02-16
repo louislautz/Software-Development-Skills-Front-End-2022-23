@@ -1,0 +1,57 @@
+.nav-components {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
+#gallery-main {
+  margin-top: 80px; }
+  #gallery-main #gallery {
+    background-color: #120600;
+    overflow: auto;
+    color: #CC9544; }
+    #gallery-main #gallery .slideshow-grid {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      row-gap: 50px;
+      justify-items: center; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container {
+        border: 1px solid #CC9544;
+        width: 400px; }
+        #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images {
+          position: relative; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images p.image-counter {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            color: #000;
+            margin: 0px; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(18, 6, 0, 0);
+            color: #000;
+            font-size: 30px;
+            height: 80px;
+            width: 40px;
+            border: none; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
+            right: 0; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev:hover, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next:hover {
+            background-color: rgba(18, 6, 0, 0.9);
+            color: #CC9544;
+            transition: all 0.5s ease-out; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
+            display: none;
+            width: 100%;
+            height: 450px;
+            object-fit: cover; }
+            #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide.active {
+              display: block; }
+      #gallery-main #gallery .slideshow-grid .slideshow-caption .cat-name {
+        text-align: center;
+        font-size: 30px;
+        margin: 10px 0 0 0; }
+      #gallery-main #gallery .slideshow-grid .slideshow-caption .cat-description {
+        padding: 0 10px; }

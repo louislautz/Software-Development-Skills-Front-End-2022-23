@@ -20,6 +20,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 15;
   height: 80px;
   width: 100%;
   display: flex;
@@ -33,12 +34,14 @@ header {
     aspect-ratio: 1 / 1;
     background-color: #CC9544;
     padding: 5px; }
-  header #logo-banner #logo-title {
-    font-size: 45px;
-    font-family: Snell Roundhand, cursive;
-    color: #CC9544;
-    letter-spacing: 2px;
-    margin-left: 10px; }
+  header #logo-banner #logo-link {
+    text-decoration: none; }
+    header #logo-banner #logo-link #logo-title {
+      font-size: 45px;
+      font-family: Snell Roundhand, cursive;
+      color: #CC9544;
+      letter-spacing: 2px;
+      margin: 0 25px; }
   header nav {
     height: 100%; }
     header nav ul {
@@ -60,14 +63,14 @@ header {
   height: 100%;
   align-items: center; }
 
-main {
+#home-main {
   margin-top: 80px; }
-  main #landing-page {
+  #home-main #landing-page {
     gap: 20px;
     height: calc(100vh - 80px);
     background-color: #120600;
     overflow: auto; }
-    main #landing-page #heading {
+    #home-main #landing-page #heading {
       display: flex;
       flex-direction: column;
       background-color: #361500;
@@ -75,23 +78,23 @@ main {
       margin: 10vh 0 0 10vw;
       padding: 15px;
       border-radius: 50px; }
-      main #landing-page #heading #heading-text h1 {
+      #home-main #landing-page #heading #heading-text h1 {
         font-size: 100px;
         margin: 0;
         color: #CC9544; }
-      main #landing-page #heading #heading-text p {
+      #home-main #landing-page #heading #heading-text p {
         font-size: 20px;
         color: #CC9544; }
-      main #landing-page #heading .buttons {
+      #home-main #landing-page #heading .buttons {
         display: flex;
         flex-direction: row;
         margin: 0 0 0 4vw;
         gap: 30px; }
-        main #landing-page #heading .buttons .button {
+        #home-main #landing-page #heading .buttons .button {
           padding: 15px 30px;
           background-color: #CC9544;
           border-radius: 500px; }
-          main #landing-page #heading .buttons .button a {
+          #home-main #landing-page #heading .buttons .button a {
             text-decoration: none;
             color: #120600; }
 
@@ -101,40 +104,57 @@ main {
   height: 100%;
   align-items: center; }
 
-main {
+#gallery-main {
   margin-top: 80px; }
-  main #landing-page {
-    gap: 20px;
-    height: calc(100vh - 80px);
+  #gallery-main #gallery {
     background-color: #120600;
-    overflow: auto; }
-    main #landing-page #heading {
-      display: flex;
-      flex-direction: column;
-      background-color: #361500;
-      width: 800px;
-      margin: 10vh 0 0 10vw;
-      padding: 15px;
-      border-radius: 50px; }
-      main #landing-page #heading #heading-text h1 {
-        font-size: 100px;
-        margin: 0;
-        color: #CC9544; }
-      main #landing-page #heading #heading-text p {
-        font-size: 20px;
-        color: #CC9544; }
-      main #landing-page #heading .buttons {
-        display: flex;
-        flex-direction: row;
-        margin: 0 0 0 4vw;
-        gap: 30px; }
-        main #landing-page #heading .buttons .button {
-          padding: 15px 30px;
-          background-color: #CC9544;
-          border-radius: 500px; }
-          main #landing-page #heading .buttons .button a {
-            text-decoration: none;
-            color: #120600; }
+    overflow: auto;
+    color: #CC9544; }
+    #gallery-main #gallery .slideshow-grid {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      row-gap: 50px;
+      justify-items: center; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container {
+        border: 1px solid #CC9544;
+        width: 400px; }
+        #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images {
+          position: relative; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images p.image-counter {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            color: #000;
+            margin: 0px; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(18, 6, 0, 0);
+            color: #000;
+            font-size: 30px;
+            height: 80px;
+            width: 40px;
+            border: none; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
+            right: 0; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev:hover, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next:hover {
+            background-color: rgba(18, 6, 0, 0.9);
+            color: #CC9544;
+            transition: all 0.5s ease-out; }
+          #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
+            display: none;
+            width: 100%;
+            height: 450px;
+            object-fit: cover; }
+            #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide.active {
+              display: block; }
+      #gallery-main #gallery .slideshow-grid .slideshow-caption .cat-name {
+        text-align: center;
+        font-size: 30px;
+        margin: 10px 0 0 0; }
+      #gallery-main #gallery .slideshow-grid .slideshow-caption .cat-description {
+        padding: 0 10px; }
 
 * {
   box-sizing: border-box; }

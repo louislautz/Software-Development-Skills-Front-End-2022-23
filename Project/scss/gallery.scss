@@ -1,52 +1,80 @@
 @import "config";
 
-main {
+#gallery-main {
     margin-top: $navbar-height;
 
-    #landing-page {
-        gap: 20px;
-        height: calc(100vh - #{$navbar-height});
+    #gallery {
         background-color: $primary-background;
         overflow: auto;
+        color: $primary-accent;
         
-        #heading {
-            display: flex;
-            flex-direction: column;
-            background-color: $secondary-background;
-            width: 800px;
-            margin: 10vh 0 0 10vw;
-            padding: 15px;
-            border-radius: 50px;
-            
-            #heading-text {
+        .slideshow-grid{
+            padding: 30px;
+            display: grid;
+            grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+            row-gap: 50px;
+            justify-items: center;
+
+            .slideshow-container{
+                border: 1px solid $primary-accent;
+                width: 400px;
                 
-                h1 {
-                    font-size: 100px;
-                    margin: 0;
-                    color: $primary-accent;
-                }
-                
-                p {
-                    font-size: 20px;
-                    color: $primary-accent;
+                .slideshow-images{
+                    position: relative;
+
+                    p.image-counter{
+                        position: absolute;
+                        top: 15px;
+                        left: 10px;
+                        color: #000;
+                        margin: 0px;
+                    }
+
+                    button.prev, button.next {
+                        position: absolute;
+                        top: 50%;
+                        background-color: rgba($primary-background, 0);
+                        color: #000;
+                        font-size: 30px;
+                        height: 80px;
+                        width: 40px;
+                        border: none;
+                    }
+                    
+                    button.next {
+                        right: 0;
+                    }
+                    
+                    button.prev:hover, button.next:hover {
+                        background-color: rgba($primary-background, 0.9);
+                        color: $primary-accent;
+                        @include easeOut()
+                    }
+    
+                    img.slide{
+                        display: none;
+                        width: 100%;
+                        height: 450px;
+                        object-fit: cover;
+                        
+    
+                        &.active{
+                            display: block;
+                        }
+                    }
                 }
             }
-            
-            .buttons {
-                display: flex;
-                flex-direction: row;
-                margin: 0 0 0 4vw;
-                gap: 30px;  
-    
-                .button {
-                    padding: 15px 30px;
-                    background-color: $primary-accent;
-                    border-radius: 500px;
-                    
-                    a {
-                        text-decoration: none;
-                        color: $primary-background;
-                    }
+
+            .slideshow-caption{
+
+                .cat-name {
+                    text-align: center;
+                    font-size: 30px;
+                    margin: 10px 0 0 0;
+                }
+
+                .cat-description{
+                    padding: 0 10px;
                 }
             }
         }
