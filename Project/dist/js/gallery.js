@@ -1,11 +1,18 @@
 var slideIndex = 0;
 var slideshows = Array.from(document.getElementsByClassName("slideshow-container"));
-console.log(slideshows)
 
 for (i = 0; i < slideshows.length; i++) {
     //set custom data attribute to first current image index
     slideshows[i].setAttribute("data-currentslide", slideIndex);
     showImage(parseInt(slideshows[i].getAttribute("data-currentslide")), i);
+
+    var tempSlides = slideshows[i].getElementsByClassName("slide");
+    if (tempSlides.length == 1) {
+        var tempButtons = slideshows[i].querySelectorAll("button");
+        tempButtons.forEach(button => {
+            button.style.display = "none";
+        });
+    }
 }
 
 function showImage(imageIndex, slideShowIndex) {

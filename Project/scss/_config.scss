@@ -1,12 +1,12 @@
 // Colors
 $primary-background:#120600;
-$secondary-background:#361500;
-// $secondary-background:#240e00;
+$secondary-background:lighten($primary-background, 4);
 $primary-accent:#CC9544;
 $secondary-accent:#603601;
 
 // Variables
 $navbar-height: 80px;
+$footer-height: 160px;
 
 // Class prototypes
 .nav-components {
