@@ -6,27 +6,6 @@
     overflow: auto;
     color: $primary-accent;
 
-    #gallery-heading {
-        display: flex;
-        flex-direction: column;
-        background-color: $secondary-background;
-        width: 800px;
-        margin: 50px 0 50px 10vw;
-        padding: 15px;
-        border-radius: 50px;
-            
-        h1 {
-            font-size: 100px;
-            margin: 0;
-            color: $primary-accent;
-        }
-        
-        p {
-            font-size: 20px;
-            color: $primary-accent;
-        }
-    }
-
     #gallery {
         
         .slideshow-grid{

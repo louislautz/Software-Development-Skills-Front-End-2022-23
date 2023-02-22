@@ -19,11 +19,10 @@ function showImage(imageIndex, slideShowIndex) {
     var slides = Array.from(slideshows[slideShowIndex].getElementsByClassName("slide"));
     var counter = slideshows[slideShowIndex].getElementsByClassName("image-counter")[0];
 
-    
+    // Wraps the pictures over
     if (imageIndex > slides.length - 1){
         imageIndex = 0;
     }
-    
     if (imageIndex < 0){
         imageIndex = slides.length - 1;
     }

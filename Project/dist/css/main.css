@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
   flex-direction: row;
@@ -70,33 +71,18 @@ header {
     height: calc(100vh - 80px);
     background-color: #120600;
     overflow: auto; }
-    #home-main #landing-page #heading {
+    #home-main #landing-page #heading .buttons {
       display: flex;
-      flex-direction: column;
-      background-color: #260d00;
-      width: 800px;
-      margin: 50px 0 50px 10vw;
-      padding: 15px;
-      border-radius: 50px; }
-      #home-main #landing-page #heading #heading-text h1 {
-        font-size: 100px;
-        margin: 0;
-        color: #CC9544; }
-      #home-main #landing-page #heading #heading-text p {
-        font-size: 20px;
-        color: #CC9544; }
-      #home-main #landing-page #heading .buttons {
-        display: flex;
-        flex-direction: row;
-        margin: 0 0 0 4vw;
-        gap: 30px; }
-        #home-main #landing-page #heading .buttons .button {
-          padding: 15px 30px;
-          background-color: #CC9544;
-          border-radius: 500px; }
-          #home-main #landing-page #heading .buttons .button a {
-            text-decoration: none;
-            color: #120600; }
+      flex-direction: row;
+      margin: 0 0 0 4vw;
+      gap: 30px; }
+      #home-main #landing-page #heading .buttons .button {
+        padding: 15px 30px;
+        background-color: #CC9544;
+        border-radius: 500px; }
+        #home-main #landing-page #heading .buttons .button a {
+          text-decoration: none;
+          color: #120600; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -109,21 +95,6 @@ header {
   background-color: #120600;
   overflow: auto;
   color: #CC9544; }
-  #gallery-main #gallery-heading {
-    display: flex;
-    flex-direction: column;
-    background-color: #260d00;
-    width: 800px;
-    margin: 50px 0 50px 10vw;
-    padding: 15px;
-    border-radius: 50px; }
-    #gallery-main #gallery-heading h1 {
-      font-size: 100px;
-      margin: 0;
-      color: #CC9544; }
-    #gallery-main #gallery-heading p {
-      font-size: 20px;
-      color: #CC9544; }
   #gallery-main #gallery .slideshow-grid {
     padding: 0 30px 50px;
     display: grid;
@@ -181,13 +152,67 @@ header {
         padding: 10px 10px 0px;
         margin: 0; }
 
+.nav-components, header #logo-banner, header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
+#menu-main {
+  margin-top: 80px;
+  background-color: #120600;
+  overflow: auto;
+  color: #CC9544; }
+  #menu-main .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #260d00;
+    width: 800px;
+    margin: 50px 0 50px 10vw;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center; }
+  #menu-main .course-heading {
+    font-size: 35px; }
+  #menu-main .price {
+    font-size: 22px; }
+    #menu-main .price::before {
+      content: "  ·  ";
+      font-size: 18px;
+      font-weight: 800; }
+    #menu-main .price::after {
+      content: " €";
+      font-size: 16px; }
+  #menu-main .dish-name {
+    font-size: 22px; }
+  #menu-main .dish-description {
+    font-size: 15px;
+    font-style: italic; }
+
 * {
   box-sizing: border-box; }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #120600; }
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  background-color: #260d00;
+  width: 800px;
+  margin: 50px 0 50px 10vw;
+  padding: 15px;
+  border-radius: 50px; }
+  .page-heading h1 {
+    font-size: 100px;
+    margin: 0;
+    color: #CC9544; }
+  .page-heading p {
+    font-size: 20px;
+    color: #CC9544; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;

@@ -1,0 +1,47 @@
+@import "config";
+
+#menu-main {
+    margin-top: $navbar-height;
+    background-color: $primary-background;
+    overflow: auto;
+    color: $primary-accent;
+
+    .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: $secondary-background;
+        width: 800px;
+        margin: 50px 0 50px 10vw;
+        padding: 15px;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    .course-heading{
+        font-size: 35px;
+    }
+    
+    .price{
+        font-size: 22px;
+
+        &::before{
+            content: "  ·  ";
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        &::after{
+            content: " €";
+            font-size: 16px;
+        }
+    }
+    
+    .dish-name{
+        font-size: 22px;
+    }
+    
+    .dish-description{
+        font-size: 15px;
+        font-style: italic;
+    }
+}
