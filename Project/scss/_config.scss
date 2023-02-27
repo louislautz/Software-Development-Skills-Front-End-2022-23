@@ -1,12 +1,16 @@
 // Colors
-$primary-background:#120600;
-$secondary-background:lighten($primary-background, 4);
-$primary-accent:#CC9544;
-$secondary-accent:#603601;
+$primary-background:#285430;
+$secondary-background:#557153;
+$primary-accent:#EAE509;
+// $primary-background:#120600;
+// $secondary-background:lighten($primary-background, 4);
+// $primary-accent:#CC9544;
+// $secondary-accent:#603601;
 
 // Variables
 $navbar-height: 80px;
 $footer-height: 160px;
+$contact-item-width: 250px;
 
 // Class prototypes
 .nav-components {
@@ -26,7 +30,21 @@ $footer-height: 160px;
     }
 }
 
-// Animation
+// MIXINS
+
 @mixin easeOut {
     transition: all 0.5s ease-out;
 }
+
+@mixin borderShadow($Xoffset: 5px, $Yoffset: 5px, $blurRadius: 5px, $color: $primary-background){
+    box-shadow: $Xoffset $Yoffset $blurRadius darken($color, 10);
+}
+
+// Set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+} 

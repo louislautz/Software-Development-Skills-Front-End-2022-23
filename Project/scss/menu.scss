@@ -3,45 +3,62 @@
 #menu-main {
     margin-top: $navbar-height;
     background-color: $primary-background;
+    color: set-text-color($primary-background);
     overflow: auto;
-    color: $primary-accent;
 
     .menu-wrapper {
         display: flex;
         flex-direction: column;
         background-color: $secondary-background;
         width: 800px;
-        margin: 50px 0 50px 10vw;
+        margin: 50px auto;
         padding: 15px;
         border-radius: 50px;
         text-align: center;
-    }
+        @include borderShadow;
 
-    .course-heading{
-        font-size: 35px;
-    }
-    
-    .price{
-        font-size: 22px;
+        .course-wrapper {
 
-        &::before{
-            content: "  ·  ";
-            font-size: 18px;
-            font-weight: 800;
+            .course-heading{
+                font-size: 35px;
+            }
+
+            .course-info{
+                margin-top: -15px;
+                margin-bottom: 30px;
+            }
+
+            span.price{
+                font-size: 22px;
+        
+                &::before{
+                    content: "  ·  ";
+                    font-size: 18px;
+                    font-weight: 800;
+                }
+        
+                &::after{
+                    content: " €";
+                    font-size: 16px;
+                }
+            }
+
+            .dish {
+                
+                .dish-name{
+                    font-size: 22px;
+                    margin-bottom: 5px;
+                }
+                
+                .dish-description{
+                    font-size: 15px;
+                    font-style: italic;
+                }
+
+                &:last-child() {
+                    margin-bottom: 30px;
+                }
+            }
         }
-
-        &::after{
-            content: " €";
-            font-size: 16px;
-        }
-    }
-    
-    .dish-name{
-        font-size: 22px;
-    }
-    
-    .dish-description{
-        font-size: 15px;
-        font-style: italic;
     }
 }

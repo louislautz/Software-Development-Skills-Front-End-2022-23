@@ -9,7 +9,10 @@
   #home-main #landing-page {
     gap: 20px;
     height: calc(100vh - 80px);
-    background-color: #120600;
+    background-image: url("../img/landing-page-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: auto; }
     #home-main #landing-page #heading .buttons {
       display: flex;
@@ -18,8 +21,8 @@
       gap: 30px; }
       #home-main #landing-page #heading .buttons .button {
         padding: 15px 30px;
-        background-color: #CC9544;
+        background-color: #EAE509;
         border-radius: 500px; }
         #home-main #landing-page #heading .buttons .button a {
           text-decoration: none;
-          color: #120600; }
+          color: #000; }

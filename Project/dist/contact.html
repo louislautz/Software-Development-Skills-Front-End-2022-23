@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiti's Kitties</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="header">
         <div id="logo-banner">
-            <img src="img/logo.svg" alt="" id="logo-img">
-            <p id="logo-title">Kiti's Kitties</p>
+            <img src="img/logo.svg" alt="cat logo" id="logo-img">
+            <a href="index.html" id="logo-link">
+                <p id="logo-title">Kiti's Kitties</p>
+            </a>
         </div>
         <nav id="nav-container">
             <ul id="nav-list">
@@ -23,10 +26,56 @@
         </nav>
     </header>
     <main id="contact-main">
-        <h1>Contact</h1>
+        <div id="heading" class="page-heading">
+            <h1>Contact</h1>
+            <p>Feel free to reach out to us!</p>
+        </div>
+        <section id="contact-grid">
+            <div class="contact-item">
+                <div class="contact-header-wrapper">
+                    <i class="fa-brands fa-twitter contact-icon fa-2x"></i>
+                    <h3 class="contact-heading">Twitter</h3>
+                </div>
+                <p class="contact-text">Check us out on Twitter!</p>
+                <a href="#" class="contact-link">@kitis_kitties</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-header-wrapper">
+                    <i class="fa-brands fa-instagram contact-icon fa-2x"></i>
+                    <h3 class="contact-heading">Instagram</h3>
+                </div>
+                <p class="contact-text">Check out our Instagram</p>
+                <a href="#" class="contact-link">@kitis_kitties</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-header-wrapper">
+                    <i class="fa-brands fa-facebook contact-icon fa-2x"></i>
+                    <h3 class="contact-heading">Facebook</h3>
+                </div>
+                <p class="contact-text">Look at our Facebook page</p>
+                <a href="#" class="contact-link">@kitis_kitties</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-header-wrapper">
+                    <i class="fa fa-envelope contact-icon fa-2x"></i>
+                    <h3 class="contact-heading">Email</h3>
+                </div>
+                <p class="contact-text">Send us an Email</p>
+                <a href="#" class="contact-link">contact@kitis-kitties.com</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-header-wrapper">
+                    <i class="fa fa-phone contact-icon fa-2x"></i>
+                    <h3 class="contact-heading">Phone</h3>
+                </div>
+                <p class="contact-text">Give us a call</p>
+                <a href="#" class="contact-link">+1234567890</a>
+            </div>
+        </section>
     </main>
     <footer id="footer">
         <p>This is a fake restaurant page for an online course.</p>
+        <p>Big shoutout to my instagram followers for supplying the cat photos.</p>
     </footer>
 </body>
 </html>

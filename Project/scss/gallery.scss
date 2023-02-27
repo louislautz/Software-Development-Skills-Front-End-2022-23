@@ -3,8 +3,8 @@
 #gallery-main {
     margin-top: $navbar-height;
     background-color: $primary-background;
+    color: set-text-color($primary-background);
     overflow: auto;
-    color: $primary-accent;
 
     #gallery {
         
@@ -16,7 +16,7 @@
             justify-items: center;
 
             .slideshow-container{
-                border: 1px solid $primary-accent;
+                @include borderShadow;
                 border-radius: 10px;
                 background-color: $secondary-background;
                 width: 400px;
@@ -24,6 +24,16 @@
                 
                 .slideshow-images{
                     position: relative;
+                    
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-image: linear-gradient(rgba(0, 0, 0, 0) 98%, $secondary-background 100%);
+                    }
 
                     p.image-counter{
                         position: absolute;
@@ -34,6 +44,7 @@
                         margin: 0px;
                         padding: 10px;
                         border-bottom-right-radius: 40%;
+                        z-index: 2;
                     }
 
                     button.prev, button.next {
@@ -46,6 +57,7 @@
                         height: 80px;
                         width: 40px;
                         border: none;
+                        z-index: 2;
                     }
                     
                     button.next {

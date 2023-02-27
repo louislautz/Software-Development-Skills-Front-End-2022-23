@@ -7,6 +7,6 @@ footer {
     justify-items: center;
     height: $footer-height;
     background-color: $secondary-background;
-    border-top: 1px solid $primary-accent;
-    color: $primary-accent;
+    color: set-text-color($secondary-background);
+    @include borderShadow($Xoffset: 0px, $Yoffset: -5px);
 }

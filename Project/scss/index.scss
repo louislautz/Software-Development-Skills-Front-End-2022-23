@@ -6,7 +6,11 @@
     #landing-page {
         gap: 20px;
         height: calc(100vh - #{$navbar-height});
-        background-color: $primary-background;
+        // background-color: $primary-background;
+        background-image: url("../img/landing-page-background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         overflow: auto;
         
         #heading {
@@ -24,7 +28,7 @@
                     
                     a {
                         text-decoration: none;
-                        color: $primary-background;
+                        color: set-text-color($primary-accent);
                     }
                 }
             }

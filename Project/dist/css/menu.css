@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.nav-components {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
+#menu-main {
+  margin-top: 80px;
+  background-color: #285430;
+  color: #fff;
+  overflow: auto; }
+  #menu-main .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #557153;
+    width: 800px;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #18311c; }
+    #menu-main .menu-wrapper .course-wrapper .course-heading {
+      font-size: 35px; }
+    #menu-main .menu-wrapper .course-wrapper .course-info {
+      margin-top: -15px;
+      margin-bottom: 30px; }
+    #menu-main .menu-wrapper .course-wrapper span.price {
+      font-size: 22px; }
+      #menu-main .menu-wrapper .course-wrapper span.price::before {
+        content: "  ·  ";
+        font-size: 18px;
+        font-weight: 800; }
+      #menu-main .menu-wrapper .course-wrapper span.price::after {
+        content: " €";
+        font-size: 16px; }
+    #menu-main .menu-wrapper .course-wrapper .dish .dish-name {
+      font-size: 22px;
+      margin-bottom: 5px; }
+    #menu-main .menu-wrapper .course-wrapper .dish .dish-description {
+      font-size: 15px;
+      font-style: italic; }
+    #menu-main .menu-wrapper .course-wrapper .dish:last-child() {
+      margin-bottom: 30px; }

@@ -6,6 +6,7 @@
 @import "index";
 @import "gallery";
 @import "menu";
+@import "contact";
 
 * {
     box-sizing: border-box;
@@ -15,27 +16,28 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: $primary-background;
+    background: $primary-background;
 }
 
 .page-heading {
     display: flex;
     flex-direction: column;
     background-color: $secondary-background;
+    @include borderShadow;
     width: 800px;
-    margin: 50px 0 50px 10vw;
+    margin: 50px auto;
     padding: 15px;
     border-radius: 50px;
         
     h1 {
         font-size: 100px;
         margin: 0;
-        color: $primary-accent;
+        color: set-text-color($secondary-background);
     }
     
     p {
         font-size: 20px;
-        color: $primary-accent;
+        color: set-text-color($secondary-background);
     }
 }
 

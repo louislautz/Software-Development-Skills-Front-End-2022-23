@@ -9,7 +9,7 @@ span.initial {
   font-size: 25px; }
 
 span.accent-color {
-  color: #CC9544; }
+  color: #EAE509; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -28,19 +28,19 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #120600;
-  border-bottom: 1px solid #CC9544; }
+  background-color: #285430;
+  box-shadow: 5px 5px 5px #18311c; }
   header #logo-banner #logo-img {
     height: 100%;
     aspect-ratio: 1 / 1;
-    background-color: #CC9544;
+    background-color: #EAE509;
     padding: 5px; }
   header #logo-banner #logo-link {
     text-decoration: none; }
     header #logo-banner #logo-link #logo-title {
       font-size: 45px;
       font-family: Snell Roundhand, cursive;
-      color: #CC9544;
+      color: #fff;
       letter-spacing: 2px;
       margin: 0 25px; }
   header nav {
@@ -52,11 +52,11 @@ header {
       margin: 0 20px 0 0;
       padding: 0; }
       header nav ul li:hover {
-        border-bottom: 2px solid #CC9544; }
+        border-bottom: 2px solid #EAE509; }
       header nav ul a {
         font-size: 20px;
         text-decoration: none;
-        color: #CC9544; }
+        color: #fff; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -69,7 +69,10 @@ header {
   #home-main #landing-page {
     gap: 20px;
     height: calc(100vh - 80px);
-    background-color: #120600;
+    background-image: url("../img/landing-page-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: auto; }
     #home-main #landing-page #heading .buttons {
       display: flex;
@@ -78,11 +81,11 @@ header {
       gap: 30px; }
       #home-main #landing-page #heading .buttons .button {
         padding: 15px 30px;
-        background-color: #CC9544;
+        background-color: #EAE509;
         border-radius: 500px; }
         #home-main #landing-page #heading .buttons .button a {
           text-decoration: none;
-          color: #120600; }
+          color: #000; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -92,9 +95,9 @@ header {
 
 #gallery-main {
   margin-top: 80px;
-  background-color: #120600;
-  overflow: auto;
-  color: #CC9544; }
+  background-color: #285430;
+  color: #fff;
+  overflow: auto; }
   #gallery-main #gallery .slideshow-grid {
     padding: 0 30px 50px;
     display: grid;
@@ -102,38 +105,48 @@ header {
     row-gap: 50px;
     justify-items: center; }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
-      border: 1px solid #CC9544;
+      box-shadow: 5px 5px 5px #18311c;
       border-radius: 10px;
-      background-color: #260d00;
+      background-color: #557153;
       width: 400px;
       overflow: hidden; }
       #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images {
         position: relative; }
+        #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(rgba(0, 0, 0, 0) 98%, #557153 100%); }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images p.image-counter {
           position: absolute;
-          background-color: #CC9544;
+          background-color: #EAE509;
           top: 0px;
           left: 0px;
           color: #000;
           margin: 0px;
           padding: 10px;
-          border-bottom-right-radius: 40%; }
+          border-bottom-right-radius: 40%;
+          z-index: 2; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
           position: absolute;
           top: 50%;
-          background-color: rgba(18, 6, 0, 0);
+          background-color: rgba(40, 84, 48, 0);
           border-radius: 0 10px 10px 0;
           color: #000;
           font-size: 30px;
           height: 80px;
           width: 40px;
-          border: none; }
+          border: none;
+          z-index: 2; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
           right: 0;
           border-radius: 10px 0 0 10px; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev:hover, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next:hover {
-          background-color: rgba(18, 6, 0, 0.8);
-          color: #CC9544;
+          background-color: rgba(40, 84, 48, 0.8);
+          color: #EAE509;
           transition: all 0.5s ease-out; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
           display: none;
@@ -160,34 +173,84 @@ header {
 
 #menu-main {
   margin-top: 80px;
-  background-color: #120600;
-  overflow: auto;
-  color: #CC9544; }
+  background-color: #285430;
+  color: #fff;
+  overflow: auto; }
   #menu-main .menu-wrapper {
     display: flex;
     flex-direction: column;
-    background-color: #260d00;
+    background-color: #557153;
     width: 800px;
-    margin: 50px 0 50px 10vw;
+    margin: 50px auto;
     padding: 15px;
     border-radius: 50px;
-    text-align: center; }
-  #menu-main .course-heading {
-    font-size: 35px; }
-  #menu-main .price {
-    font-size: 22px; }
-    #menu-main .price::before {
-      content: "  ·  ";
-      font-size: 18px;
-      font-weight: 800; }
-    #menu-main .price::after {
-      content: " €";
-      font-size: 16px; }
-  #menu-main .dish-name {
-    font-size: 22px; }
-  #menu-main .dish-description {
-    font-size: 15px;
-    font-style: italic; }
+    text-align: center;
+    box-shadow: 5px 5px 5px #18311c; }
+    #menu-main .menu-wrapper .course-wrapper .course-heading {
+      font-size: 35px; }
+    #menu-main .menu-wrapper .course-wrapper .course-info {
+      margin-top: -15px;
+      margin-bottom: 30px; }
+    #menu-main .menu-wrapper .course-wrapper span.price {
+      font-size: 22px; }
+      #menu-main .menu-wrapper .course-wrapper span.price::before {
+        content: "  ·  ";
+        font-size: 18px;
+        font-weight: 800; }
+      #menu-main .menu-wrapper .course-wrapper span.price::after {
+        content: " €";
+        font-size: 16px; }
+    #menu-main .menu-wrapper .course-wrapper .dish .dish-name {
+      font-size: 22px;
+      margin-bottom: 5px; }
+    #menu-main .menu-wrapper .course-wrapper .dish .dish-description {
+      font-size: 15px;
+      font-style: italic; }
+    #menu-main .menu-wrapper .course-wrapper .dish:last-child {
+      margin-bottom: 30px; }
+
+.nav-components, header #logo-banner, header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
+#contact-main {
+  margin-top: 80px;
+  background-color: #285430;
+  overflow: auto;
+  color: #fff;
+  height: calc(100vh - 80px); }
+  #contact-main #contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto; }
+    #contact-main #contact-grid .contact-item {
+      box-shadow: 5px 5px 5px #18311c;
+      border-radius: 10px;
+      width: 250px;
+      height: 150px;
+      background-color: #557153; }
+      #contact-main #contact-grid .contact-item .contact-header-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        padding-left: 15px; }
+        #contact-main #contact-grid .contact-item .contact-header-wrapper .contact-icon {
+          color: #EAE509; }
+      #contact-main #contact-grid .contact-item .contact-text {
+        padding: 0 15px 0 15px; }
+      #contact-main #contact-grid .contact-item .contact-link {
+        padding: 0 15px 0 15px;
+        color: #fff;
+        text-decoration: none; }
+      #contact-main #contact-grid .contact-item .contact-link:hover {
+        color: #EAE509; }
 
 * {
   box-sizing: border-box; }
@@ -196,23 +259,24 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #120600; }
+  background: #285430; }
 
 .page-heading {
   display: flex;
   flex-direction: column;
-  background-color: #260d00;
+  background-color: #557153;
+  box-shadow: 5px 5px 5px #18311c;
   width: 800px;
-  margin: 50px 0 50px 10vw;
+  margin: 50px auto;
   padding: 15px;
   border-radius: 50px; }
   .page-heading h1 {
     font-size: 100px;
     margin: 0;
-    color: #CC9544; }
+    color: #fff; }
   .page-heading p {
     font-size: 20px;
-    color: #CC9544; }
+    color: #fff; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -226,6 +290,6 @@ footer {
   align-items: center;
   justify-items: center;
   height: 160px;
-  background-color: #260d00;
-  border-top: 1px solid #CC9544;
-  color: #CC9544; }
+  background-color: #557153;
+  color: #fff;
+  box-shadow: 0px -5px 5px #18311c; }
