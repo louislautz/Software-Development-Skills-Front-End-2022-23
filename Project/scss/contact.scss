@@ -2,51 +2,54 @@
 
 #contact-main {
     margin-top: $navbar-height;
-    background-color: $primary-background;
-    overflow: auto;
     color: set-text-color($primary-background);
-    height: calc(100vh - #{$navbar-height});
-
-    #contact-grid {
-        display: grid;
-        grid-template-columns:repeat(auto-fit,minmax($contact-item-width, 1fr));
-        gap: 50px;
-        justify-items: center;
-        align-items: center;
-        width: 90%;
-        margin: 0 auto;
-
-        .contact-item {
-            @include borderShadow;
-            border-radius: 10px;
-            width: $contact-item-width;
-            height: 150px;
-            background-color: $secondary-background;
+    
+    #contact {
+        overflow: auto;
+        height: calc(100vh - #{$navbar-height});
+        @include backgroundImage;
+        
+        #contact-grid {
+            display: grid;
+            grid-template-columns:repeat(auto-fit,minmax($contact-item-width, 1fr));
+            gap: 50px;
+            justify-items: center;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto;
             
-            .contact-header-wrapper {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 15px;
-                padding-left: 15px;
-
-                .contact-icon{
+            .contact-item {
+                @include borderShadow;
+                border-radius: 10px;
+                width: $contact-item-width;
+                height: 150px;
+                background-color: $secondary-background;
+                
+                .contact-header-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 15px;
+                    padding-left: 15px;
+                    
+                    .contact-icon{
+                        color: $primary-accent;
+                    }
+                }
+                
+                .contact-text {
+                    padding: 0 15px 0 15px;
+                }
+                
+                .contact-link {
+                    padding: 0 15px 0 15px;
+                    color: set-text-color($secondary-background);
+                    text-decoration: none;
+                }
+                
+                .contact-link:hover {
                     color: $primary-accent;
                 }
-            }
-            
-            .contact-text {
-                padding: 0 15px 0 15px;
-            }
-
-            .contact-link {
-                padding: 0 15px 0 15px;
-                color: set-text-color($secondary-background);
-                text-decoration: none;
-            }
-
-            .contact-link:hover {
-                color: $primary-accent;
             }
         }
     }

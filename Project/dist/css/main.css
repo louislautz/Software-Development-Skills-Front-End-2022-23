@@ -15,11 +15,11 @@ span.initial {
   font-size: 25px; }
 
 span.accent-color {
-  color: #EAE509; }
+  color: #47b5ff; }
 
 .button.hover-raise:hover {
   transform: translateY(-5px);
-  box-shadow: 5px 5px 5px #18311c;
+  box-shadow: 5px 5px 5px #010a0f;
   transition: all 0.25s ease-out; }
 
 .button.hover-raise:not(:hover) {
@@ -27,7 +27,7 @@ span.accent-color {
 
 .button.hover-raise:active {
   transform: translateY(-3px);
-  box-shadow: 3px 3px 3px #18311c;
+  box-shadow: 3px 3px 3px #010a0f;
   transition: all 0.1s ease-out; }
 
 .nav-components, header #logo-banner, header nav ul {
@@ -47,12 +47,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: #285430;
-  box-shadow: 5px 5px 5px #18311c; }
+  background-color: #06283d;
+  box-shadow: 5px 5px 5px #010a0f; }
   header #logo-banner #logo-img {
     height: 100%;
     aspect-ratio: 1 / 1;
-    background-color: #EAE509;
+    background-color: #47b5ff;
     padding: 5px; }
   header #logo-banner #logo-link {
     text-decoration: none; }
@@ -71,7 +71,7 @@ header {
       margin: 0 20px 0 0;
       padding: 0; }
       header nav ul li:hover {
-        border-bottom: 2px solid #EAE509; }
+        border-bottom: 2px solid #47b5ff; }
       header nav ul a {
         font-size: 20px;
         text-decoration: none;
@@ -86,12 +86,12 @@ header {
 #home-main {
   margin-top: 80px; }
   #home-main #landing-page {
-    gap: 20px;
     height: calc(100vh - 80px);
     background-image: url("../img/landing-page-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba(6, 40, 61, 0.2);
     overflow: auto; }
     #home-main #landing-page #heading .buttons {
       display: flex;
@@ -103,7 +103,7 @@ header {
         color: #000; }
         #home-main #landing-page #heading .buttons a .button {
           padding: 15px 30px;
-          background-color: #EAE509;
+          background-color: #47b5ff;
           border-radius: 500px; }
 
 .nav-components, header #logo-banner, header nav ul {
@@ -114,7 +114,7 @@ header {
 
 #gallery-main {
   margin-top: 80px;
-  background-color: #285430;
+  background-color: #06283d;
   color: #fff;
   overflow: auto; }
   #gallery-main #gallery .slideshow-grid {
@@ -124,9 +124,9 @@ header {
     row-gap: 50px;
     justify-items: center; }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
-      box-shadow: 5px 5px 5px #18311c;
+      box-shadow: 5px 5px 5px #010a0f;
       border-radius: 10px;
-      background-color: #557153;
+      background-color: #256d85;
       width: 400px;
       overflow: hidden; }
       #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images {
@@ -138,10 +138,10 @@ header {
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: linear-gradient(rgba(0, 0, 0, 0) 98%, #557153 100%); }
+          background-image: linear-gradient(rgba(0, 0, 0, 0) 98%, #256d85 100%); }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images p.image-counter {
           position: absolute;
-          background-color: #EAE509;
+          background-color: #47b5ff;
           top: 0px;
           left: 0px;
           color: #000;
@@ -152,7 +152,7 @@ header {
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
           position: absolute;
           top: 50%;
-          background-color: rgba(40, 84, 48, 0);
+          background-color: rgba(6, 40, 61, 0);
           border-radius: 0 10px 10px 0;
           color: #000;
           font-size: 30px;
@@ -164,8 +164,8 @@ header {
           right: 0;
           border-radius: 10px 0 0 10px; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev:hover, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next:hover {
-          background-color: rgba(40, 84, 48, 0.8);
-          color: #EAE509;
+          background-color: rgba(6, 40, 61, 0.8);
+          color: #47b5ff;
           transition: all 0.5s ease-out; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
           display: none;
@@ -192,41 +192,48 @@ header {
 
 #menu-main {
   margin-top: 80px;
-  background-color: #285430;
+  background-color: #06283d;
   color: #fff;
   overflow: auto; }
-  #menu-main .menu-wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: #557153;
-    width: 800px;
-    margin: 50px auto;
-    padding: 15px;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 5px 5px 5px #18311c; }
-    #menu-main .menu-wrapper .course-wrapper .course-heading {
-      font-size: 35px; }
-    #menu-main .menu-wrapper .course-wrapper .course-info {
-      margin-top: -15px;
-      margin-bottom: 30px; }
-    #menu-main .menu-wrapper .course-wrapper span.price {
-      font-size: 22px; }
-      #menu-main .menu-wrapper .course-wrapper span.price::before {
-        content: "  ·  ";
-        font-size: 18px;
-        font-weight: 800; }
-      #menu-main .menu-wrapper .course-wrapper span.price::after {
-        content: " €";
-        font-size: 16px; }
-    #menu-main .menu-wrapper .course-wrapper .dish .dish-name {
-      font-size: 22px;
-      margin-bottom: 5px; }
-    #menu-main .menu-wrapper .course-wrapper .dish .dish-description {
-      font-size: 15px;
-      font-style: italic; }
-    #menu-main .menu-wrapper .course-wrapper .dish:last-child {
-      margin-bottom: 30px; }
+  #menu-main #menu {
+    background-image: url("../img/landing-page-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba(6, 40, 61, 0.2);
+    overflow: auto; }
+    #menu-main #menu .menu-wrapper {
+      display: flex;
+      flex-direction: column;
+      background-color: #256d85;
+      width: 800px;
+      margin: 50px auto;
+      padding: 15px;
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: 5px 5px 5px #010a0f; }
+      #menu-main #menu .menu-wrapper .course-wrapper .course-heading {
+        font-size: 35px; }
+      #menu-main #menu .menu-wrapper .course-wrapper .course-info {
+        margin-top: -15px;
+        margin-bottom: 30px; }
+      #menu-main #menu .menu-wrapper .course-wrapper span.price {
+        font-size: 22px; }
+        #menu-main #menu .menu-wrapper .course-wrapper span.price::before {
+          content: "  ·  ";
+          font-size: 18px;
+          font-weight: 800; }
+        #menu-main #menu .menu-wrapper .course-wrapper span.price::after {
+          content: " €";
+          font-size: 16px; }
+      #menu-main #menu .menu-wrapper .course-wrapper .dish .dish-name {
+        font-size: 22px;
+        margin-bottom: 5px; }
+      #menu-main #menu .menu-wrapper .course-wrapper .dish .dish-description {
+        font-size: 15px;
+        font-style: italic; }
+      #menu-main #menu .menu-wrapper .course-wrapper .dish:last-child {
+        margin-bottom: 30px; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -236,40 +243,46 @@ header {
 
 #contact-main {
   margin-top: 80px;
-  background-color: #285430;
-  overflow: auto;
-  color: #fff;
-  height: calc(100vh - 80px); }
-  #contact-main #contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    justify-items: center;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto; }
-    #contact-main #contact-grid .contact-item {
-      box-shadow: 5px 5px 5px #18311c;
-      border-radius: 10px;
-      width: 250px;
-      height: 150px;
-      background-color: #557153; }
-      #contact-main #contact-grid .contact-item .contact-header-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 15px;
-        padding-left: 15px; }
-        #contact-main #contact-grid .contact-item .contact-header-wrapper .contact-icon {
-          color: #EAE509; }
-      #contact-main #contact-grid .contact-item .contact-text {
-        padding: 0 15px 0 15px; }
-      #contact-main #contact-grid .contact-item .contact-link {
-        padding: 0 15px 0 15px;
-        color: #fff;
-        text-decoration: none; }
-      #contact-main #contact-grid .contact-item .contact-link:hover {
-        color: #EAE509; }
+  color: #fff; }
+  #contact-main #contact {
+    overflow: auto;
+    height: calc(100vh - 80px);
+    background-image: url("../img/landing-page-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba(6, 40, 61, 0.2);
+    overflow: auto; }
+    #contact-main #contact #contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 50px;
+      justify-items: center;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto; }
+      #contact-main #contact #contact-grid .contact-item {
+        box-shadow: 5px 5px 5px #010a0f;
+        border-radius: 10px;
+        width: 250px;
+        height: 150px;
+        background-color: #256d85; }
+        #contact-main #contact #contact-grid .contact-item .contact-header-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 15px;
+          padding-left: 15px; }
+          #contact-main #contact #contact-grid .contact-item .contact-header-wrapper .contact-icon {
+            color: #47b5ff; }
+        #contact-main #contact #contact-grid .contact-item .contact-text {
+          padding: 0 15px 0 15px; }
+        #contact-main #contact #contact-grid .contact-item .contact-link {
+          padding: 0 15px 0 15px;
+          color: #fff;
+          text-decoration: none; }
+        #contact-main #contact #contact-grid .contact-item .contact-link:hover {
+          color: #47b5ff; }
 
 * {
   box-sizing: border-box; }
@@ -278,13 +291,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #285430; }
+  background: #06283d; }
 
 .page-heading {
   display: flex;
   flex-direction: column;
-  background-color: #557153;
-  box-shadow: 5px 5px 5px #18311c;
+  background-color: #256d85;
+  box-shadow: 5px 5px 5px #010a0f;
   width: 800px;
   margin: 50px auto;
   padding: 15px;
@@ -309,6 +322,6 @@ footer {
   align-items: center;
   justify-items: center;
   height: 160px;
-  background-color: #557153;
+  background-color: #256d85;
   color: #fff;
-  box-shadow: 0px -5px 5px #18311c; }
+  box-shadow: 0px -5px 5px #010a0f; }

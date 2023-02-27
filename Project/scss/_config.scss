@@ -1,7 +1,10 @@
 // Colors
-$primary-background:#285430;
-$secondary-background:#557153;
-$primary-accent:#EAE509;
+// $primary-background:#285430;
+// $secondary-background:#557153;
+// $primary-accent:#EAE509;
+$primary-background:#06283d;
+$secondary-background:#256d85;
+$primary-accent:#47b5ff;
 
 // Variables
 $navbar-height: 80px;
@@ -49,4 +52,13 @@ $contact-item-width: 250px;
     transform: translateY(-3px);
     @include borderShadow($Xoffset: 3px, $Yoffset: 3px, $blurRadius: 3px);
     @include easeOut($speed: 0.1s);
+}
+
+@mixin backgroundImage {
+    background-image: url("../img/landing-page-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba($primary-background, 0.2);
+    overflow: auto;
 }
