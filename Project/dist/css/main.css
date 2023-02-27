@@ -5,11 +5,30 @@
   height: 100%;
   align-items: center; }
 
+.nav-components, header #logo-banner, header nav ul {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center; }
+
 span.initial {
   font-size: 25px; }
 
 span.accent-color {
   color: #EAE509; }
+
+.button.hover-raise:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 5px #18311c;
+  transition: all 0.25s ease-out; }
+
+.button.hover-raise:not(:hover) {
+  transition: all 0.25s ease-out; }
+
+.button.hover-raise:active {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 3px #18311c;
+  transition: all 0.1s ease-out; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
@@ -79,13 +98,13 @@ header {
       flex-direction: row;
       margin: 0 0 0 4vw;
       gap: 30px; }
-      #home-main #landing-page #heading .buttons .button {
-        padding: 15px 30px;
-        background-color: #EAE509;
-        border-radius: 500px; }
-        #home-main #landing-page #heading .buttons .button a {
-          text-decoration: none;
-          color: #000; }
+      #home-main #landing-page #heading .buttons a {
+        text-decoration: none;
+        color: #000; }
+        #home-main #landing-page #heading .buttons a .button {
+          padding: 15px 30px;
+          background-color: #EAE509;
+          border-radius: 500px; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;

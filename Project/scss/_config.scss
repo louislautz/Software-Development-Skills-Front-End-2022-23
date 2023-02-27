@@ -2,10 +2,6 @@
 $primary-background:#285430;
 $secondary-background:#557153;
 $primary-accent:#EAE509;
-// $primary-background:#120600;
-// $secondary-background:lighten($primary-background, 4);
-// $primary-accent:#CC9544;
-// $secondary-accent:#603601;
 
 // Variables
 $navbar-height: 80px;
@@ -31,20 +27,26 @@ $contact-item-width: 250px;
 }
 
 // MIXINS
-
-@mixin easeOut {
-    transition: all 0.5s ease-out;
+@mixin easeOut($speed: 0.5s) {
+    transition: all $speed ease-out;
 }
 
 @mixin borderShadow($Xoffset: 5px, $Yoffset: 5px, $blurRadius: 5px, $color: $primary-background){
     box-shadow: $Xoffset $Yoffset $blurRadius darken($color, 10);
 }
 
-// Set text color
-@function set-text-color($color) {
-    @if (lightness($color) > 40) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
-} 
+@mixin hoverRaise {
+    transform: translateY(-5px);
+    @include borderShadow;
+    @include easeOut($speed: 0.25s);
+}
+
+@mixin releaseRaise {
+    @include easeOut($speed: 0.25s);
+}
+
+@mixin clickRaise {
+    transform: translateY(-3px);
+    @include borderShadow($Xoffset: 3px, $Yoffset: 3px, $blurRadius: 3px);
+    @include easeOut($speed: 0.1s);
+}

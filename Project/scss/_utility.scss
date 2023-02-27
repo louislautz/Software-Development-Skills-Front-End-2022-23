@@ -1,7 +1,34 @@
+@import "config";
+
 span.initial {
     font-size: 25px;
 }
 
 span.accent-color {
     color: $primary-accent;
+}
+
+.button.hover-raise{
+
+    &:hover {
+        @include hoverRaise;
+    }
+    
+    &:not(:hover) {
+        @include releaseRaise;
+    }
+    
+    &:active {
+        @include clickRaise;
+    }
+}
+
+
+// Set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
 }

@@ -21,14 +21,14 @@
                 margin: 0 0 0 4vw;
                 gap: 30px;  
     
-                .button {
-                    padding: 15px 30px;
-                    background-color: $primary-accent;
-                    border-radius: 500px;
-                    
-                    a {
-                        text-decoration: none;
-                        color: set-text-color($primary-accent);
+                a {
+                    text-decoration: none;
+                    color: set-text-color($primary-accent);
+
+                    .button {
+                        padding: 15px 30px;
+                        background-color: $primary-accent;
+                        border-radius: 500px;
                     }
                 }
             }

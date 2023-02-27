@@ -19,10 +19,10 @@
       flex-direction: row;
       margin: 0 0 0 4vw;
       gap: 30px; }
-      #home-main #landing-page #heading .buttons .button {
-        padding: 15px 30px;
-        background-color: #EAE509;
-        border-radius: 500px; }
-        #home-main #landing-page #heading .buttons .button a {
-          text-decoration: none;
-          color: #000; }
+      #home-main #landing-page #heading .buttons a {
+        text-decoration: none;
+        color: #000; }
+        #home-main #landing-page #heading .buttons a .button {
+          padding: 15px 30px;
+          background-color: #EAE509;
+          border-radius: 500px; }
