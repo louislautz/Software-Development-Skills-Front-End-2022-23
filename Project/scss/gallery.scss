@@ -83,22 +83,23 @@
                         }
                     }
                 }
-            }
-
-            .slideshow-caption{
-                padding: 10px 0;
-
-                .cat-name {
-                    text-align: center;
-                    font-size: 30px;
-                    margin: 0;
-                }
                 
-                .cat-description{
-                    padding: 10px 10px 0px;
-                    margin: 0;
+                .slideshow-caption{
+                    padding: 10px 0;
+    
+                    .cat-name {
+                        text-align: center;
+                        font-size: 30px;
+                        margin: 0;
+                    }
+                    
+                    .cat-description{
+                        padding: 10px 10px 0px;
+                        margin: 0;
+                    }
                 }
             }
+
         }
     }
 }

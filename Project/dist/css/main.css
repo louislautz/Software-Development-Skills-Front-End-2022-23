@@ -5,11 +5,47 @@
   height: 100%;
   align-items: center; }
 
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
   flex-direction: row;
   height: 100%;
   align-items: center; }
+
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 span.initial {
   font-size: 25px; }
@@ -35,6 +71,24 @@ span.accent-color {
   flex-direction: row;
   height: 100%;
   align-items: center; }
+
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 header {
   position: fixed;
@@ -83,6 +137,24 @@ header {
   height: 100%;
   align-items: center; }
 
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 #home-main {
   margin-top: 80px; }
   #home-main #landing-page {
@@ -111,6 +183,24 @@ header {
   flex-direction: row;
   height: 100%;
   align-items: center; }
+
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 #gallery-main {
   margin-top: 80px;
@@ -174,21 +264,39 @@ header {
           object-fit: cover; }
           #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide.active {
             display: block; }
-    #gallery-main #gallery .slideshow-grid .slideshow-caption {
-      padding: 10px 0; }
-      #gallery-main #gallery .slideshow-grid .slideshow-caption .cat-name {
-        text-align: center;
-        font-size: 30px;
-        margin: 0; }
-      #gallery-main #gallery .slideshow-grid .slideshow-caption .cat-description {
-        padding: 10px 10px 0px;
-        margin: 0; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-caption {
+        padding: 10px 0; }
+        #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-caption .cat-name {
+          text-align: center;
+          font-size: 30px;
+          margin: 0; }
+        #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-caption .cat-description {
+          padding: 10px 10px 0px;
+          margin: 0; }
 
 .nav-components, header #logo-banner, header nav ul {
   display: flex;
   flex-direction: row;
   height: 100%;
   align-items: center; }
+
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 #menu-main {
   margin-top: 80px;
@@ -241,6 +349,24 @@ header {
   height: 100%;
   align-items: center; }
 
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 #contact-main {
   margin-top: 80px;
   color: #fff; }
@@ -278,11 +404,48 @@ header {
         #contact-main #contact #contact-grid .contact-item .contact-text {
           padding: 0 15px 0 15px; }
         #contact-main #contact #contact-grid .contact-item .contact-link {
-          padding: 0 15px 0 15px;
-          color: #fff;
-          text-decoration: none; }
-        #contact-main #contact #contact-grid .contact-item .contact-link:hover {
-          color: #47b5ff; }
+          width: fit-content; }
+          #contact-main #contact #contact-grid .contact-item .contact-link a {
+            padding: 0 15px 0 15px;
+            color: #fff;
+            text-decoration: none; }
+            #contact-main #contact #contact-grid .contact-item .contact-link a:hover {
+              color: #47b5ff; }
+
+#contact-grid .contact-item:nth-child(1) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(2) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(3) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(4) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(5) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite; }
 
 * {
   box-sizing: border-box; }
@@ -303,8 +466,9 @@ body {
   padding: 15px;
   border-radius: 50px; }
   .page-heading h1 {
-    font-size: 100px;
+    width: fit-content;
     margin: 0;
+    font-size: 100px;
     color: #fff; }
   .page-heading p {
     font-size: 20px;
@@ -315,6 +479,24 @@ body {
   flex-direction: row;
   height: 100%;
   align-items: center; }
+
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 footer {
   display: flex;

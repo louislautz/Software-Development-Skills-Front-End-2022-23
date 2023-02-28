@@ -30,8 +30,9 @@ body {
     border-radius: 50px;
         
     h1 {
-        font-size: 100px;
+        width: fit-content;
         margin: 0;
+        font-size: 100px;
         color: set-text-color($secondary-background);
     }
     

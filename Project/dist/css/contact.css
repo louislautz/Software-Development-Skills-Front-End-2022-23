@@ -4,6 +4,24 @@
   height: 100%;
   align-items: center; }
 
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 #contact-main {
   margin-top: 80px;
   color: #fff; }
@@ -41,8 +59,45 @@
         #contact-main #contact #contact-grid .contact-item .contact-text {
           padding: 0 15px 0 15px; }
         #contact-main #contact #contact-grid .contact-item .contact-link {
-          padding: 0 15px 0 15px;
-          color: #fff;
-          text-decoration: none; }
-        #contact-main #contact #contact-grid .contact-item .contact-link:hover {
-          color: #47b5ff; }
+          width: fit-content; }
+          #contact-main #contact #contact-grid .contact-item .contact-link a {
+            padding: 0 15px 0 15px;
+            color: #fff;
+            text-decoration: none; }
+            #contact-main #contact #contact-grid .contact-item .contact-link a:hover {
+              color: #47b5ff; }
+
+#contact-grid .contact-item:nth-child(1) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(2) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(3) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(4) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite; }
+
+#contact-grid .contact-item:nth-child(5) .contact-link:not(:hover) {
+  transform-origin: center;
+  animation-name: text-shake;
+  animation-duration: 8s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite; }

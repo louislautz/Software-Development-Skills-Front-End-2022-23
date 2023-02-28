@@ -42,15 +42,25 @@
                 }
                 
                 .contact-link {
-                    padding: 0 15px 0 15px;
-                    color: set-text-color($secondary-background);
-                    text-decoration: none;
-                }
-                
-                .contact-link:hover {
-                    color: $primary-accent;
+                    width: fit-content;
+
+                    a {
+                        padding: 0 15px 0 15px;
+                        color: set-text-color($secondary-background);
+                        text-decoration: none;
+                        
+                        &:hover {
+                            color: $primary-accent;
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+@for $i from 1 through 5 {
+    #contact-grid .contact-item:nth-child(#{$i}) .contact-link:not(:hover) {
+        @include textShakeAnimation($delay: #{$i}s);
     }
 }
