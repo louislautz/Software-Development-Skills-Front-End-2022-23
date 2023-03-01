@@ -23,7 +23,19 @@
             .course-wrapper {
                 
                 .course-heading{
-                    font-size: 35px;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+
+                    .course-icon {
+                        color: $primary-accent;
+                    }
+
+                    .course-name {
+                        font-size: 35px;
+                    }
                 }
                 
                 .course-info{

@@ -32,9 +32,12 @@
     background-image: url("../img/landing-page-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     box-shadow: inset 0 0 0 100vmax rgba(6, 40, 61, 0.2);
     overflow: auto; }
+    #menu-main #menu::after {
+      content: 0.2; }
     #menu-main #menu .menu-wrapper {
       display: flex;
       flex-direction: column;
@@ -46,7 +49,15 @@
       text-align: center;
       box-shadow: 5px 5px 5px #010a0f; }
       #menu-main #menu .menu-wrapper .course-wrapper .course-heading {
-        font-size: 35px; }
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center; }
+        #menu-main #menu .menu-wrapper .course-wrapper .course-heading .course-icon {
+          color: #47b5ff; }
+        #menu-main #menu .menu-wrapper .course-wrapper .course-heading .course-name {
+          font-size: 35px; }
       #menu-main #menu .menu-wrapper .course-wrapper .course-info {
         margin-top: -15px;
         margin-bottom: 30px; }

@@ -3,6 +3,7 @@
 #gallery-main {
     margin-top: $navbar-height;
     background-color: $primary-background;
+    @include backgroundImage(0.6);
     color: set-text-color($primary-background);
     overflow: auto;
 
@@ -87,10 +88,21 @@
                 .slideshow-caption{
                     padding: 10px 0;
     
-                    .cat-name {
-                        text-align: center;
-                        font-size: 30px;
-                        margin: 0;
+                    .icon-name {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        justify-content: center;
+
+                        .cat-icon {
+                            color: $primary-accent;
+                        }
+                        
+                        .cat-name {
+                            text-align: center;
+                            font-size: 30px;
+                            margin: 0;
+                        }
                     }
                     
                     .cat-description{

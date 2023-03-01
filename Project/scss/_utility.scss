@@ -9,18 +9,7 @@ span.accent-color {
 }
 
 .button.hover-raise{
-
-    &:hover {
-        @include hoverRaise;
-    }
-    
-    &:not(:hover) {
-        @include releaseRaise;
-    }
-    
-    &:active {
-        @include clickRaise;
-    }
+    @include hoverRaise;
 }
 
 
