@@ -19,11 +19,12 @@
             margin: 0 auto;
             
             .contact-item {
-                @include borderShadow;
-                border-radius: 10px;
+                border-radius: $small-border-radius;
                 width: $contact-item-width;
                 height: 150px;
                 background-color: $secondary-background;
+                color: set-text-color($secondary-background);
+                @include borderShadow;
                 
                 .contact-header-wrapper {
                     display: flex;

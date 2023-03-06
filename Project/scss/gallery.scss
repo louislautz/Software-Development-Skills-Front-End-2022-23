@@ -12,14 +12,15 @@
         .slideshow-grid{
             padding: 0 30px 50px;
             display: grid;
-            grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+            grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
             row-gap: 50px;
             justify-items: center;
 
             .slideshow-container{
-                @include borderShadow;
-                border-radius: 10px;
+                border-radius: $small-border-radius;
                 background-color: $secondary-background;
+                color: set-text-color($secondary-background);
+                @include borderShadow;
                 width: 400px;
                 overflow: hidden;
                 
@@ -39,9 +40,9 @@
                     p.image-counter{
                         position: absolute;
                         background-color: $primary-accent;
+                        color: set-text-color($primary-accent);
                         top: 0px;
                         left: 0px;
-                        color: #000;
                         margin: 0px;
                         padding: 10px;
                         border-bottom-right-radius: 40%;
@@ -52,7 +53,7 @@
                         position: absolute;
                         top: 50%;
                         background-color: rgba($primary-background, 0);
-                        border-radius: 0 10px 10px 0;
+                        border-radius: 0 $small-border-radius $small-border-radius 0;
                         color: #000;
                         font-size: 30px;
                         height: 80px;
@@ -63,7 +64,7 @@
                     
                     button.next {
                         right: 0;
-                        border-radius: 10px 0 0 10px;
+                        border-radius: $small-border-radius 0 0 $small-border-radius;
                     }
                     
                     button.prev:hover, button.next:hover {

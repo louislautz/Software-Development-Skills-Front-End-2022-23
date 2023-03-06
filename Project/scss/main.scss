@@ -11,6 +11,9 @@
 * {
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     padding: 0;
@@ -22,12 +25,13 @@ body {
 .page-heading {
     display: flex;
     flex-direction: column;
-    background-color: $secondary-background;
-    @include borderShadow;
-    width: 800px;
+    width: 80%;
+    max-width: $max-content-width;
     margin: 50px auto;
     padding: 15px;
-    border-radius: 50px;
+    border-radius: $big-border-radius;
+    background-color: $secondary-background;
+    @include borderShadow;
         
     h1 {
         width: fit-content;
@@ -39,6 +43,35 @@ body {
     p {
         font-size: 20px;
         color: set-text-color($secondary-background);
+    }
+
+    form {
+        margin-bottom: 20px;
+
+        input[type=email] {
+            height: 40px;
+            width: 250px;
+            border: none;
+            border-radius: $small-border-radius;
+            padding-left: 15px;
+
+            &:focus {
+                outline: none;
+                transform: translateY(-3px);
+                @include borderShadow($Xoffset: 3px, $Yoffset: 3px, $blurRadius: 3px);
+                @include easeOut($speed: 0.25s);
+            }
+        }
+
+        input[type=submit] {
+            padding: 15px 30px;
+            margin-left: 10px;
+            background-color: $primary-accent;
+            color: set-text-color($primary-accent);
+            border-radius: $big-border-radius;
+            border: none;
+            font-size: 16px;
+        }
     }
 }
 

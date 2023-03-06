@@ -1,11 +1,13 @@
 // Colors
-// $primary-background:#285430;
-// $secondary-background:#557153;
-// $primary-accent:#EAE509;
-$primary-background:#06283d;
-$secondary-background:#256d85;
-$primary-accent:#47b5ff;
+$primary-background:#0C2233;
+$secondary-background:#065471;
+$primary-accent:#FFC045;
+
+// Styles
 $color-layer-opacity: 0.2;
+$big-border-radius: 50px;
+$small-border-radius: 10px;
+$max-content-width: 1000px;
 
 // Variables
 $navbar-height: 80px;
@@ -35,8 +37,8 @@ $contact-item-width: 250px;
     transition: all $speed ease-out;
 }
 
-@mixin borderShadow($Xoffset: 5px, $Yoffset: 5px, $blurRadius: 5px, $color: $primary-background){
-    box-shadow: $Xoffset $Yoffset $blurRadius darken($color, 10);
+@mixin borderShadow($Xoffset: 5px, $Yoffset: 5px, $blurRadius: 5px){
+    box-shadow: $Xoffset $Yoffset $blurRadius black;
 }
 
 @mixin hoverRaise {
@@ -57,19 +59,21 @@ $contact-item-width: 250px;
     }
 }
 
-@mixin backgroundImage($additional-opacity: 0) {
-    background-image: url("../img/landing-page-background.jpg");
+@mixin backgroundImage($additional-opacity: 0, $image: "landing-page-background.jpg") {
+    background-image: url("../img/#{$image}");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     box-shadow: inset 0 0 0 100vmax rgba($primary-background, ($additional-opacity + $color-layer-opacity));
     overflow: auto;
+}
 
-    &::after{
-
-        content: ($additional-opacity + $color-layer-opacity);
-    }
+@mixin fixScroll {
+    padding-top: $navbar-height;
+    padding-bottom: ($navbar-height + 10px);
+    margin-top: -$navbar-height;
+    background-clip: padding-box;
 }
 
 @mixin textShakeAnimation($delay) {
@@ -90,5 +94,9 @@ $contact-item-width: 250px;
     8% {transform: rotate(-5deg);}
     10% {transform: rotate(5deg);}
     12% {transform: rotate(0deg);}
+    // Break in animation
     100% {transform: rotate(0deg);}
 }
+
+
+// MEDIA QUERIES

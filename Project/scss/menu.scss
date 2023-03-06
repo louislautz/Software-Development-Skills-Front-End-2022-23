@@ -5,19 +5,21 @@
     background-color: $primary-background;
     color: set-text-color($primary-background);
     overflow: auto;
-
+    
     #menu {
         @include backgroundImage;
         
         .menu-wrapper {
             display: flex;
             flex-direction: column;
-            background-color: $secondary-background;
-            width: 800px;
+            width: 80%;
+            max-width: $max-content-width;
             margin: 50px auto;
             padding: 15px;
-            border-radius: 50px;
+            border-radius: $big-border-radius;
             text-align: center;
+            background-color: $secondary-background;
+            color: set-text-color($secondary-background);
             @include borderShadow;
             
             .course-wrapper {

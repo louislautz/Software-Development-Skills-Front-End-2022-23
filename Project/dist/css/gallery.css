@@ -24,18 +24,16 @@
 
 #gallery-main {
   margin-top: 80px;
-  background-color: #06283d;
+  background-color: #0C2233;
   background-image: url("../img/landing-page-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  box-shadow: inset 0 0 0 100vmax rgba(6, 40, 61, 0.8);
+  box-shadow: inset 0 0 0 100vmax rgba(12, 34, 51, 0.8);
   overflow: auto;
   color: #fff;
   overflow: auto; }
-  #gallery-main::after {
-    content: 0.8; }
   #gallery-main #gallery .slideshow-grid {
     padding: 0 30px 50px;
     display: grid;
@@ -43,9 +41,10 @@
     row-gap: 50px;
     justify-items: center; }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
-      box-shadow: 5px 5px 5px #010a0f;
       border-radius: 10px;
-      background-color: #256d85;
+      background-color: #065471;
+      color: #fff;
+      box-shadow: 5px 5px 5px black;
       width: 400px;
       overflow: hidden; }
       #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images {
@@ -57,13 +56,13 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: linear-gradient(rgba(0, 0, 0, 0) 98%, #256d85 100%); }
+          background-image: linear-gradient(rgba(0, 0, 0, 0) 98%, #065471 100%); }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images p.image-counter {
           position: absolute;
-          background-color: #47b5ff;
+          background-color: #FFC045;
+          color: #000;
           top: 0px;
           left: 0px;
-          color: #000;
           margin: 0px;
           padding: 10px;
           border-bottom-right-radius: 40%;
@@ -71,7 +70,7 @@
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next {
           position: absolute;
           top: 50%;
-          background-color: rgba(6, 40, 61, 0);
+          background-color: rgba(12, 34, 51, 0);
           border-radius: 0 10px 10px 0;
           color: #000;
           font-size: 30px;
@@ -83,8 +82,8 @@
           right: 0;
           border-radius: 10px 0 0 10px; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.prev:hover, #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images button.next:hover {
-          background-color: rgba(6, 40, 61, 0.8);
-          color: #47b5ff;
+          background-color: rgba(12, 34, 51, 0.8);
+          color: #FFC045;
           transition: all 0.5s ease-out; }
         #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
           display: none;
@@ -101,7 +100,7 @@
           gap: 10px;
           justify-content: center; }
           #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-caption .icon-name .cat-icon {
-            color: #47b5ff; }
+            color: #FFC045; }
           #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-caption .icon-name .cat-name {
             text-align: center;
             font-size: 30px;

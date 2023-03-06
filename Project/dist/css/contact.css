@@ -33,10 +33,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    box-shadow: inset 0 0 0 100vmax rgba(6, 40, 61, 0.2);
+    box-shadow: inset 0 0 0 100vmax rgba(12, 34, 51, 0.2);
     overflow: auto; }
-    #contact-main #contact::after {
-      content: 0.2; }
     #contact-main #contact #contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -46,11 +44,12 @@
       width: 90%;
       margin: 0 auto; }
       #contact-main #contact #contact-grid .contact-item {
-        box-shadow: 5px 5px 5px #010a0f;
         border-radius: 10px;
         width: 250px;
         height: 150px;
-        background-color: #256d85; }
+        background-color: #065471;
+        color: #fff;
+        box-shadow: 5px 5px 5px black; }
         #contact-main #contact #contact-grid .contact-item .contact-header-wrapper {
           display: flex;
           flex-direction: row;
@@ -58,7 +57,7 @@
           gap: 15px;
           padding-left: 15px; }
           #contact-main #contact #contact-grid .contact-item .contact-header-wrapper .contact-icon {
-            color: #47b5ff; }
+            color: #FFC045; }
         #contact-main #contact #contact-grid .contact-item .contact-text {
           padding: 0 15px 0 15px; }
         #contact-main #contact #contact-grid .contact-item .contact-link {
@@ -68,7 +67,7 @@
             color: #fff;
             text-decoration: none; }
             #contact-main #contact #contact-grid .contact-item .contact-link a:hover {
-              color: #47b5ff; }
+              color: #FFC045; }
 
 #contact-grid .contact-item:nth-child(1) .contact-link:not(:hover) {
   transform-origin: center;
