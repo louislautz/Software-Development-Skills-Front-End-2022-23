@@ -12,6 +12,18 @@ span.accent-color {
     @include hoverRaise;
 }
 
+.active-nav {
+    border-bottom: 2px solid $primary-accent;
+}
+
+.slide-in {
+    @include slideIn;
+}
+
+.slide-out {
+    @include slideOut;
+}
+
 
 // Set text color
 @function set-text-color($color) {

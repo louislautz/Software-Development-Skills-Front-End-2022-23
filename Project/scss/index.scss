@@ -168,3 +168,19 @@
         }
     }
 }
+
+
+// MEDIA QUERIES
+@media screen and (max-width: 740px) {
+    .content-panel {
+
+        .content {
+            flex-direction: column;
+
+            .content-text,
+            .content-image {
+                max-width: 100%;
+            }
+        }
+    }
+}

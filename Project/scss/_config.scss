@@ -14,14 +14,6 @@ $navbar-height: 80px;
 $footer-height: 160px;
 $contact-item-width: 250px;
 
-// Class prototypes
-.nav-components {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
-}
-
 
 // Set text color
 @function set-text-color($color) {
@@ -84,6 +76,18 @@ $contact-item-width: 250px;
     animation-iteration-count: infinite;
 }
 
+@mixin slideIn {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@mixin slideOut {
+    animation-name: slide-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 
 // ANIMATIONS
 @keyframes text-shake {
@@ -98,5 +102,64 @@ $contact-item-width: 250px;
     100% {transform: rotate(0deg);}
 }
 
+@keyframes slide-in {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(-100%); }
+}
+
 
 // MEDIA QUERIES
+@media screen and (max-width: 740px) {
+    header {
+
+        #nav-container {
+            display: none;
+        }
+
+        #navbar-toggle {
+            display: flex;
+        }
+    }
+
+     // Mobile View
+    &.responsive {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        #logo-banner {
+            float: left;
+        }
+
+        #nav-container-responsive {
+            display: block;
+            height: auto;
+            width: 100%;
+            z-index: -2;
+            padding-bottom: 20px;
+            background-color: $primary-background;
+            transform: translateX(-100%);
+            @include borderShadow;
+            
+            #nav-list {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        #navbar-toggle {
+            position: absolute;
+            top: 35px;
+            right: 0;
+        }
+    }
+
+
+}
+
