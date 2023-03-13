@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/8960baa748.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <header id="header">
         <div id="logo-banner">
             <img src="img/logo.svg" alt="cat logo" id="logo-img">
             <a href="index.html" id="logo-link">
@@ -19,10 +19,22 @@
         <nav id="nav-container">
             <ul id="nav-list">
                 <li class="nav-item"><a href="gallery.html"><span class="initial">G</span>allery</a></li>
-                <li class="nav-item active-nav"><a href="menu.html"><span class="initial">M</span>enu</a></li>
+                <li class="nav-item"><a href="menu.html"><span class="initial">M</span>enu</a></li>
                 <li class="nav-item"><a href="contact.html"><span class="initial">C</span>ontact</a></li>
             </ul>
         </nav>
+        <nav id="nav-container-responsive">
+            <ul id="nav-list">
+                <li class="nav-item"><a href="gallery.html"><span class="initial">G</span>allery</a></li>
+                <li class="nav-item"><a href="menu.html"><span class="initial">M</span>enu</a></li>
+                <li class="nav-item"><a href="contact.html"><span class="initial">C</span>ontact</a></li>
+            </ul>
+        </nav>
+        <div id="navbar-toggle">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
     </header>
     <main id="menu-main">
         <section id="menu">
@@ -97,6 +109,7 @@
         <p>This is a fake restaurant page for an online course.</p>
         <p>Big shoutout to my instagram followers for supplying the cat photos.</p>
     </footer>
+    <script src="js/nav-menu.js"></script>
 </body>
 </html>
 

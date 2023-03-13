@@ -7,12 +7,15 @@ $primary-accent:#FFC045;
 $color-layer-opacity: 0.2;
 $big-border-radius: 50px;
 $small-border-radius: 10px;
-$max-content-width: 1000px;
 
 // Variables
 $navbar-height: 80px;
 $footer-height: 160px;
 $contact-item-width: 250px;
+$max-content-width: 1000px;
+$precentage-content-width: 80%;
+$slide-image-height: 450px;
+$slide-container-width: 400px;
 
 
 // Set text color
@@ -88,6 +91,69 @@ $contact-item-width: 250px;
     animation-fill-mode: forwards;
 }
 
+@mixin changeContentWidth($width) {
+    .content-panel {
+        width: $width;
+    }
+    
+    .grid-content-wrapper {
+        width: $width;
+    }
+    
+    .page-heading {
+        width: $width;
+    }
+    #menu-main {
+
+        #menu {
+            
+            .menu-wrapper {
+                width: $width;
+            }
+        }
+    }
+}
+
+@mixin changeLogoFontSize($size) {
+    header {
+        
+        #logo-banner {
+            
+            #logo-link {
+                
+                #logo-title {
+                    font-size: $size;
+                }
+            }
+        }
+    }
+}
+@mixin changeGallerySize($width, $height, $gap: 50px){
+    #gallery-main {
+        
+        #gallery {
+            
+            .slideshow-grid{
+
+                column-gap: $gap;
+                grid-template-columns: repeat(auto-fit, minmax(($width + 50px), auto));
+                
+                .slideshow-container{
+                    
+                    width: $width;
+                    
+                    .slideshow-images {
+                        
+                        img.slide {
+                            height: $height;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // ANIMATIONS
 @keyframes text-shake {
@@ -115,6 +181,7 @@ $contact-item-width: 250px;
 
 // MEDIA QUERIES
 @media screen and (max-width: 740px) {
+    // === Navbar ===
     header {
 
         #nav-container {
@@ -160,6 +227,53 @@ $contact-item-width: 250px;
         }
     }
 
+    // === Index ===
+    .content-panel {
 
+        .content {
+            flex-direction: column;
+
+            .content-text,
+            .content-image {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .page-heading {
+
+        h1 {
+            font-size: 80px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    @include changeContentWidth(95%);
+
+    @include changeGallerySize(350px, 400px);
+}
+
+@media screen and (max-width: 450px) {
+    @include changeLogoFontSize(35px);
+    @include changeGallerySize(350px, 400px);
+}
+
+@media screen and (max-width: 400px) {
+    @include changeLogoFontSize(32px);
+    @include changeGallerySize(300px, 350px, 5px);
+}
+
+@media screen and (max-width: 370px) {
+    @include changeLogoFontSize(30px);
+}
+
+@media screen and (max-width: 350px) {
+    @include changeLogoFontSize(30px);
+    @include changeGallerySize(250px, 300px, 5px);
 }
 

@@ -45,7 +45,7 @@
 .content-panel {
     margin: 50px auto 0;
     height: fit-content;
-    width: 80%;
+    width: $precentage-content-width;
     max-width: $max-content-width;
     border-radius: $big-border-radius;
     background-color: $secondary-background;
@@ -112,7 +112,7 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 50px;
     margin: 50px auto 0;
-    width: 80%;
+    width: $precentage-content-width;
     max-width: $max-content-width;
     
     .grid-content-panel {
@@ -164,22 +164,6 @@
                 height: 25%;
                 right: -5px;
                 top: -5px;
-            }
-        }
-    }
-}
-
-
-// MEDIA QUERIES
-@media screen and (max-width: 740px) {
-    .content-panel {
-
-        .content {
-            flex-direction: column;
-
-            .content-text,
-            .content-image {
-                max-width: 100%;
             }
         }
     }

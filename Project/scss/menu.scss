@@ -12,7 +12,7 @@
         .menu-wrapper {
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: $precentage-content-width;
             max-width: $max-content-width;
             margin: 50px auto;
             padding: 15px;

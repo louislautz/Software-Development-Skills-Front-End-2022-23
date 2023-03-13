@@ -10,12 +10,15 @@
     #gallery {
         
         .slideshow-grid{
-            padding: 0 30px 50px;
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, auto));
+            column-gap: 50px;
             row-gap: 50px;
             justify-items: center;
-
+            align-items: center;
+            width: 100%;
+            margin: 0 auto 50px;
+            
             .slideshow-container{
                 border-radius: $small-border-radius;
                 background-color: $secondary-background;
@@ -112,7 +115,6 @@
                     }
                 }
             }
-
         }
     }
 }

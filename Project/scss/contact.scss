@@ -6,17 +6,17 @@
     
     #contact {
         overflow: auto;
-        height: calc(100vh - #{$navbar-height});
+        min-height: calc(100vh - #{$navbar-height});
         @include backgroundImage;
         
         #contact-grid {
             display: grid;
             grid-template-columns:repeat(auto-fit,minmax($contact-item-width, 1fr));
-            gap: 50px;
+            row-gap: 50px;
             justify-items: center;
             align-items: center;
             width: 90%;
-            margin: 0 auto;
+            margin: 0 auto 50px;
             
             .contact-item {
                 border-radius: $small-border-radius;
