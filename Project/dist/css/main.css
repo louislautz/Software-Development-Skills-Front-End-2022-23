@@ -529,11 +529,9 @@ header {
       background-color: #FFC045;
       padding: 5px; }
     header #logo-banner #logo-link {
-      text-decoration: none;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content; }
+      text-decoration: none; }
       header #logo-banner #logo-link #logo-title {
+        width: 250px;
         font-size: 45px;
         font-family: Snell Roundhand, cursive;
         color: #fff;
