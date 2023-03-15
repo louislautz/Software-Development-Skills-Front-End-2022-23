@@ -1,0 +1,35 @@
+@import "config";
+
+span.initial {
+    font-size: 25px;
+}
+
+span.accent-color {
+    color: $primary-accent;
+}
+
+.button.hover-raise{
+    @include hoverRaise;
+}
+
+.active-nav {
+    border-bottom: 2px solid $primary-accent;
+}
+
+.slide-in {
+    @include slideIn;
+}
+
+.slide-out {
+    @include slideOut;
+}
+
+
+// Set text color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}

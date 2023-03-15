@@ -1,0 +1,69 @@
+@import "config";
+
+#contact-main {
+    margin-top: $navbar-height;
+    color: set-text-color($primary-background);
+    
+    #contact {
+        overflow: auto;
+        min-height: calc(100vh - #{$navbar-height});
+        @include backgroundImage;
+        
+        #contact-grid {
+            display: grid;
+            grid-template-columns:repeat(auto-fit,minmax($contact-item-width, 1fr));
+            row-gap: 50px;
+            justify-items: center;
+            align-items: center;
+            width: 90%;
+            margin: 0 auto 50px;
+            
+            .contact-item {
+                border-radius: $small-border-radius;
+                width: $contact-item-width;
+                height: 150px;
+                background-color: $secondary-background;
+                color: set-text-color($secondary-background);
+                @include borderShadow;
+                
+                .contact-header-wrapper {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 15px;
+                    padding-left: 15px;
+                    
+                    .contact-icon{
+                        color: $primary-accent;
+                    }
+                }
+                
+                .contact-text {
+                    padding: 0 15px 0 15px;
+                }
+                
+                .contact-link {
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+
+                    a {
+                        padding: 0 15px 0 15px;
+                        color: set-text-color($secondary-background);
+                        text-decoration: none;
+                        
+                        &:hover {
+                            color: $primary-accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    #contact-grid .contact-item:nth-child(#{$i}) .contact-link:not(:hover) {
+        @include textShakeAnimation($delay: #{$i}s);
+    }
+}

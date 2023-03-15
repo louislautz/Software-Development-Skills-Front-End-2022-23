@@ -1,0 +1,12 @@
+@import "config";
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: $footer-height;
+    background-color: $secondary-background;
+    color: set-text-color($secondary-background);
+    @include borderShadow($Xoffset: 0px, $Yoffset: -5px);
+}

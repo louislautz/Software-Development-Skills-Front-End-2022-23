@@ -1,0 +1,111 @@
+@import "config";
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    height: $navbar-height;
+    width: 100%;
+    background-color: $primary-background;
+    @include borderShadow;
+
+    
+    #logo-banner {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+        
+        #logo-img {
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: $primary-accent;
+            padding: 5px;
+        }
+        
+        #logo-link {
+            text-decoration: none;
+            
+            #logo-title {
+                font-size: 45px;
+                font-family: Snell Roundhand, cursive;
+                color: set-text-color($primary-background);
+                letter-spacing: 1px;
+                margin: 0 25px;
+            }
+        }
+    }
+    
+    nav {
+        height: 100%;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            list-style: none;
+            margin: 0 20px 0 0;
+            padding: 0;
+
+            li.nav-item{
+
+                &:hover {
+                    border-bottom: 2px solid $primary-accent;
+                }
+            }
+            
+            a {
+                font-size: 20px;
+                text-decoration: none;
+                color: set-text-color($primary-background);
+            }
+        }
+    }
+
+    #nav-container-responsive {
+        display: none;
+    }
+
+    #navbar-toggle {
+        display: none;
+        // display: flex;
+        flex-direction: column;
+        gap: 7px;
+        margin-right: 30px;
+        cursor: pointer;
+        @include easeOut; 
+
+        .btn-line {
+            height: 2px;
+            width: 30px;
+            background-color: set-text-color($primary-background);
+            transform-origin: center;
+            @include easeOut; 
+        }
+        
+        &.close {
+            transform: rotate(180deg);
+
+            .btn-line {
+
+                &:nth-child(1){
+                    transform: rotate(45deg) translate(2px, 4px);
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    transform: rotate(-45deg) translate(2px, -4px);
+                }
+            }
+        }
+    }
+}

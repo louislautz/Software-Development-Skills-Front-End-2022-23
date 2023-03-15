@@ -1,0 +1,172 @@
+@import "config";
+
+#home-main {
+    margin-top: $navbar-height;
+
+    #landing-page {
+        min-height: 100vh;
+        @include backgroundImage;
+
+        #heading {
+            
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                margin: 0 0 0 4vw;
+                gap: 30px;  
+                
+                a {
+                    text-decoration: none;
+                    color: set-text-color($primary-accent);
+                    
+                    .button {
+                        padding: 15px 30px;
+                        background-color: $primary-accent;
+                        border-radius: $big-border-radius;
+                    }
+                }
+            }
+        }
+    }
+
+    #news {
+        min-height: 100vh;
+        @include backgroundImage;
+        @include fixScroll;
+    }
+    
+    #history {
+        min-height: 100vh;
+        @include backgroundImage;
+        @include fixScroll;
+    }
+}
+
+.content-panel {
+    margin: 50px auto 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: $precentage-content-width;
+    max-width: $max-content-width;
+    border-radius: $big-border-radius;
+    background-color: $secondary-background;
+    color: set-text-color($secondary-background);
+    @include borderShadow;
+    
+    .content-title {
+        font-size: 35px;
+        padding: 20px 0 0 20px;
+        margin: 0;
+    }
+
+    .content-date {
+        padding-left: 20px;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: row;
+        padding: 0 20px 20px;
+        gap: 20px;
+
+        .content-text {
+            max-width: 50%;
+        }
+
+        .content-image {
+            position: relative;
+            max-width: 50%;
+            z-index: 2;
+
+            img {
+                width: 100%;
+            }
+
+            &::before, 
+            &::after {
+                content: '';
+                display: inline;
+                position: absolute;
+                background-color: $primary-accent;
+                z-index: -1;
+            }
+
+            &::before {
+                width: 50%;
+                height: 50%;
+                left: -5px;
+                bottom: -1px;
+            }
+
+            &::after {
+                width: 25%;
+                height: 25%;
+                right: -5px;
+                top: -5px;
+            }
+        }
+    }
+}
+
+.grid-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 50px;
+    margin: 50px auto 0;
+    width: $precentage-content-width;
+    max-width: $max-content-width;
+    
+    .grid-content-panel {
+        border-radius: $big-border-radius;
+        background-color: $secondary-background;
+        color: set-text-color($secondary-background);
+        @include borderShadow;
+        
+        .content-title {
+            font-size: 35px;
+            padding: 20px 0 0 20px;
+            margin: 0;
+        }
+        
+        .content-date {
+            padding-left: 20px;
+        }
+        
+        .content-text {
+            display: block;
+            position: relative;
+            width: calc(100% - 40px);
+            margin: 0 20px 20px;
+            z-index: 2;
+            
+            p {
+                background-color: $secondary-background;
+                padding: 5px;
+            }
+
+            &::before, 
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: -2;
+                background-color: $primary-accent;
+            }
+
+            &::before {
+                width: 50%;
+                height: 50%;
+                left: -5px;
+                bottom: -5px;
+            }
+
+            &::after {
+                width: 25%;
+                height: 25%;
+                right: -5px;
+                top: -5px;
+            }
+        }
+    }
+}

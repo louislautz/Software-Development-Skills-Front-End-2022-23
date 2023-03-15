@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@-webkit-keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0%); } }
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0%); } }
+
+@-webkit-keyframes slide-out {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-100%); } }
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-100%); } }
+
+@media screen and (max-width: 740px) {
+  header #nav-container {
+    display: none; }
+  header #navbar-toggle {
+    display: flex; }
+  .responsive {
+    flex-direction: column;
+    align-items: flex-start; }
+    .responsive #logo-banner {
+      float: left; }
+    .responsive #nav-container-responsive {
+      display: block;
+      height: auto;
+      width: 100%;
+      z-index: -2;
+      padding-bottom: 20px;
+      background-color: #0C2233;
+      transform: translateX(-100%);
+      box-shadow: 5px 5px 5px black; }
+      .responsive #nav-container-responsive #nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center; }
+    .responsive #navbar-toggle {
+      position: absolute;
+      top: 35px;
+      right: 0; }
+  .content-panel .content {
+    flex-direction: column; }
+    .content-panel .content .content-text,
+    .content-panel .content .content-image {
+      max-width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  .page-heading h1 {
+    font-size: 80px; } }
+
+@media screen and (max-width: 500px) {
+  .content-panel {
+    width: 95%; }
+  .grid-content-wrapper {
+    width: 95%; }
+  .page-heading {
+    width: 95%; }
+  #menu-main #menu .menu-wrapper {
+    width: 95%; }
+  #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto)); }
+    #gallery-main #gallery .slideshow-grid .slideshow-container {
+      width: 350px; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
+        height: 400px; } }
+
+@media screen and (max-width: 450px) {
+  header #logo-banner #logo-link #logo-title {
+    font-size: 35px; }
+  #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto)); }
+    #gallery-main #gallery .slideshow-grid .slideshow-container {
+      width: 350px; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
+        height: 400px; } }
+
+@media screen and (max-width: 400px) {
+  header #logo-banner #logo-link #logo-title {
+    font-size: 32px; }
+  #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto)); }
+    #gallery-main #gallery .slideshow-grid .slideshow-container {
+      width: 300px; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
+        height: 350px; } }
+
+@media screen and (max-width: 370px) {
+  header #logo-banner #logo-link #logo-title {
+    font-size: 30px; } }
+
+@media screen and (max-width: 350px) {
+  header #logo-banner #logo-link #logo-title {
+    font-size: 30px; }
+  #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 5px;
+    column-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)); }
+    #gallery-main #gallery .slideshow-grid .slideshow-container {
+      width: 250px; }
+      #gallery-main #gallery .slideshow-grid .slideshow-container .slideshow-images img.slide {
+        height: 300px; } }
+
+#menu-main {
+  margin-top: 80px;
+  background-color: #0C2233;
+  color: #fff;
+  overflow: auto; }
+  #menu-main #menu {
+    background-image: url("../img/landing-page-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: inset 0 0 0 100vmax rgba(12, 34, 51, 0.2);
+    overflow: auto; }
+    #menu-main #menu .menu-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 15px;
+      border-radius: 50px;
+      text-align: center;
+      background-color: #065471;
+      color: #fff;
+      box-shadow: 5px 5px 5px black; }
+      #menu-main #menu .menu-wrapper .course-wrapper .course-heading {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center; }
+        #menu-main #menu .menu-wrapper .course-wrapper .course-heading .course-icon {
+          color: #FFC045; }
+        #menu-main #menu .menu-wrapper .course-wrapper .course-heading .course-name {
+          font-size: 35px; }
+      #menu-main #menu .menu-wrapper .course-wrapper .course-info {
+        margin-top: -15px;
+        margin-bottom: 30px; }
+      #menu-main #menu .menu-wrapper .course-wrapper span.price {
+        font-size: 22px; }
+        #menu-main #menu .menu-wrapper .course-wrapper span.price::before {
+          content: "  ·  ";
+          font-size: 18px;
+          font-weight: 800; }
+        #menu-main #menu .menu-wrapper .course-wrapper span.price::after {
+          content: " €";
+          font-size: 16px; }
+      #menu-main #menu .menu-wrapper .course-wrapper .dish .dish-name {
+        font-size: 22px;
+        margin-bottom: 5px; }
+      #menu-main #menu .menu-wrapper .course-wrapper .dish .dish-description {
+        font-size: 15px;
+        font-style: italic; }
+      #menu-main #menu .menu-wrapper .course-wrapper .dish:last-child() {
+        margin-bottom: 30px; }

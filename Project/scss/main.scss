@@ -1,0 +1,84 @@
+@import "config";
+@import "utility";
+
+@import "header";
+
+@import "index";
+@import "gallery";
+@import "menu";
+@import "contact";
+
+* {
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: $primary-background;
+}
+
+.page-heading {
+    display: flex;
+    flex-direction: column;
+    width: $precentage-content-width;
+    max-width: $max-content-width;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: $big-border-radius;
+    background-color: $secondary-background;
+    @include borderShadow;
+        
+    h1 {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0;
+        font-size: 100px;
+        color: set-text-color($secondary-background);
+    }
+    
+    p {
+        font-size: 20px;
+        color: set-text-color($secondary-background);
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+
+        input[type=email] {
+            height: 40px;
+            width: 250px;
+            border: none;
+            border-radius: $small-border-radius;
+            padding-left: 15px;
+
+            &:focus {
+                outline: none;
+                transform: translateY(-3px);
+                @include borderShadow($Xoffset: 3px, $Yoffset: 3px, $blurRadius: 3px);
+                @include easeOut($speed: 0.25s);
+            }
+        }
+
+        input[type=submit] {
+            padding: 15px 30px;
+            margin-left: 10px;
+            background-color: $primary-accent;
+            color: set-text-color($primary-accent);
+            border-radius: $big-border-radius;
+            border: none;
+            font-size: 16px;
+        }
+    }
+}
+
+@import "footer";

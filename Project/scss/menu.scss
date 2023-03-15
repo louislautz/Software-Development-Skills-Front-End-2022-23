@@ -1,0 +1,82 @@
+@import "config";
+
+#menu-main {
+    margin-top: $navbar-height;
+    background-color: $primary-background;
+    color: set-text-color($primary-background);
+    overflow: auto;
+    
+    #menu {
+        @include backgroundImage;
+        
+        .menu-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: $precentage-content-width;
+            max-width: $max-content-width;
+            margin: 50px auto;
+            padding: 15px;
+            border-radius: $big-border-radius;
+            text-align: center;
+            background-color: $secondary-background;
+            color: set-text-color($secondary-background);
+            @include borderShadow;
+            
+            .course-wrapper {
+                
+                .course-heading{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    justify-content: center;
+                    align-items: center;
+
+                    .course-icon {
+                        color: $primary-accent;
+                    }
+
+                    .course-name {
+                        font-size: 35px;
+                    }
+                }
+                
+                .course-info{
+                    margin-top: -15px;
+                    margin-bottom: 30px;
+                }
+                
+                span.price{
+                    font-size: 22px;
+                    
+                    &::before{
+                        content: "  ·  ";
+                        font-size: 18px;
+                        font-weight: 800;
+                    }
+                    
+                    &::after{
+                        content: " €";
+                        font-size: 16px;
+                    }
+                }
+                
+                .dish {
+                    
+                    .dish-name{
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    .dish-description{
+                        font-size: 15px;
+                        font-style: italic;
+                    }
+                    
+                    &:last-child() {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
