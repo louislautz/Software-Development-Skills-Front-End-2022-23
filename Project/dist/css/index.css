@@ -1,3 +1,21 @@
+@-webkit-keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 @keyframes text-shake {
   0% {
     transform: rotate(0deg); }
@@ -16,11 +34,23 @@
   100% {
     transform: rotate(0deg); } }
 
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0%); } }
+
 @keyframes slide-in {
   0% {
     transform: translateY(-100%); }
   100% {
     transform: translateY(0%); } }
+
+@-webkit-keyframes slide-out {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-100%); } }
 
 @keyframes slide-out {
   0% {
@@ -76,6 +106,7 @@
   #menu-main #menu .menu-wrapper {
     width: 95%; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 50px;
     column-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -87,6 +118,7 @@
   header #logo-banner #logo-link #logo-title {
     font-size: 35px; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 50px;
     column-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -98,6 +130,7 @@
   header #logo-banner #logo-link #logo-title {
     font-size: 32px; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 5px;
     column-gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -113,6 +146,7 @@
   header #logo-banner #logo-link #logo-title {
     font-size: 30px; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 5px;
     column-gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -172,6 +206,8 @@
 
 .content-panel {
   margin: 50px auto 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 80%;
   max-width: 1000px;

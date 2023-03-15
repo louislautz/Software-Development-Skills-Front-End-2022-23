@@ -1,3 +1,21 @@
+@-webkit-keyframes text-shake {
+  0% {
+    transform: rotate(0deg); }
+  2% {
+    transform: rotate(5deg); }
+  4% {
+    transform: rotate(-5deg); }
+  6% {
+    transform: rotate(5deg); }
+  8% {
+    transform: rotate(-5deg); }
+  10% {
+    transform: rotate(5deg); }
+  12% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(0deg); } }
+
 @keyframes text-shake {
   0% {
     transform: rotate(0deg); }
@@ -16,11 +34,23 @@
   100% {
     transform: rotate(0deg); } }
 
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0%); } }
+
 @keyframes slide-in {
   0% {
     transform: translateY(-100%); }
   100% {
     transform: translateY(0%); } }
+
+@-webkit-keyframes slide-out {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(-100%); } }
 
 @keyframes slide-out {
   0% {
@@ -76,6 +106,7 @@
   #menu-main #menu .menu-wrapper {
     width: 95%; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 50px;
     column-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -87,6 +118,7 @@
   header #logo-banner #logo-link #logo-title {
     font-size: 35px; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 50px;
     column-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -98,6 +130,7 @@
   header #logo-banner #logo-link #logo-title {
     font-size: 32px; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 5px;
     column-gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -113,6 +146,7 @@
   header #logo-banner #logo-link #logo-title {
     font-size: 30px; }
   #gallery-main #gallery .slideshow-grid {
+    -moz-column-gap: 5px;
     column-gap: 5px;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto)); }
     #gallery-main #gallery .slideshow-grid .slideshow-container {
@@ -159,6 +193,8 @@
         #contact-main #contact #contact-grid .contact-item .contact-text {
           padding: 0 15px 0 15px; }
         #contact-main #contact #contact-grid .contact-item .contact-link {
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content; }
           #contact-main #contact #contact-grid .contact-item .contact-link a {
             padding: 0 15px 0 15px;
@@ -169,35 +205,55 @@
 
 #contact-grid .contact-item:nth-child(1) .contact-link:not(:hover) {
   transform-origin: center;
+  -webkit-animation-name: text-shake;
   animation-name: text-shake;
+  -webkit-animation-duration: 8s;
   animation-duration: 8s;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
 #contact-grid .contact-item:nth-child(2) .contact-link:not(:hover) {
   transform-origin: center;
+  -webkit-animation-name: text-shake;
   animation-name: text-shake;
+  -webkit-animation-duration: 8s;
   animation-duration: 8s;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
 #contact-grid .contact-item:nth-child(3) .contact-link:not(:hover) {
   transform-origin: center;
+  -webkit-animation-name: text-shake;
   animation-name: text-shake;
+  -webkit-animation-duration: 8s;
   animation-duration: 8s;
+  -webkit-animation-delay: 3s;
   animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
 #contact-grid .contact-item:nth-child(4) .contact-link:not(:hover) {
   transform-origin: center;
+  -webkit-animation-name: text-shake;
   animation-name: text-shake;
+  -webkit-animation-duration: 8s;
   animation-duration: 8s;
+  -webkit-animation-delay: 4s;
   animation-delay: 4s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
 #contact-grid .contact-item:nth-child(5) .contact-link:not(:hover) {
   transform-origin: center;
+  -webkit-animation-name: text-shake;
   animation-name: text-shake;
+  -webkit-animation-duration: 8s;
   animation-duration: 8s;
+  -webkit-animation-delay: 5s;
   animation-delay: 5s;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }

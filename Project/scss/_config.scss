@@ -73,22 +73,32 @@ $slide-container-width: 400px;
 
 @mixin textShakeAnimation($delay) {
     transform-origin: center;
-    animation-name: text-shake;
-    animation-duration: 8s;
-    animation-delay: $delay;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: text-shake;
+            animation-name: text-shake;
+    -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+    -webkit-animation-delay: $delay;
+            animation-delay: $delay;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
 @mixin slideIn {
-    animation-name: slide-in;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: slide-in;
+            animation-name: slide-in;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
 @mixin slideOut {
-    animation-name: slide-out;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    -webkit-animation-name: slide-out;
+            animation-name: slide-out;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
 @mixin changeContentWidth($width) {
@@ -135,7 +145,9 @@ $slide-container-width: 400px;
             
             .slideshow-grid{
 
-                column-gap: $gap;
+                -moz-column-gap: $gap;
+
+                     column-gap: $gap;
                 grid-template-columns: repeat(auto-fit, minmax(($width + 50px), auto));
                 
                 .slideshow-container{
@@ -156,6 +168,17 @@ $slide-container-width: 400px;
 
 
 // ANIMATIONS
+@-webkit-keyframes text-shake {
+    0% {transform: rotate(0deg);}
+    2% {transform: rotate(5deg);}
+    4% {transform: rotate(-5deg);}
+    6% {transform: rotate(5deg);}
+    8% {transform: rotate(-5deg);}
+    10% {transform: rotate(5deg);}
+    12% {transform: rotate(0deg);}
+    // Break in animation
+    100% {transform: rotate(0deg);}
+}
 @keyframes text-shake {
     0% {transform: rotate(0deg);}
     2% {transform: rotate(5deg);}
@@ -168,9 +191,19 @@ $slide-container-width: 400px;
     100% {transform: rotate(0deg);}
 }
 
+@-webkit-keyframes slide-in {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0%); }
+}
+
 @keyframes slide-in {
     0% { transform: translateY(-100%); }
     100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(-100%); }
 }
 
 @keyframes slide-out {
